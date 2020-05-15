@@ -15,11 +15,11 @@
   .kwd {
     color: #8959a8; }
 
-  /* a comment */
+  /* a Comment */
   .com {
     color: #8e908c; }
 
-  /* a type name */
+  /* a Type name */
   .typ {
     color: #4271ae; }
 
@@ -39,7 +39,7 @@
   .clo {
     color: #4d4d4c; }
 
-  /* a markup tag name */
+  /* a markup Tag name */
   .tag {
     color: #c82829; }
 

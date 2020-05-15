@@ -1,8 +1,8 @@
 /*
  * Editor.md
  *
- * @file        editormd.preview.css 
- * @version     v1.5.0 
+ * @file        editormd.preview.css
+ * @version     v1.5.0
  * @description Open source online markdown editor.
  * @license     MIT License
  * @author      Pandao
@@ -2402,8 +2402,8 @@
 .editormd-logo-7x:before,
 .editormd-logo-8x:before {
   content: "\e1987";
-  /* 
-  HTML Entity &#xe1987; 
+  /*
+  HTML Entity &#xe1987;
   example: <span class="editormd-logo">&#xe1987;</span>
   */
 }
@@ -3213,12 +3213,12 @@
     color: #800;
   }
 
-  /* a comment */
+  /* a Comment */
   .typ {
     color: #606;
   }
 
-  /* a type name */
+  /* a Type name */
   .lit {
     color: #066;
   }
@@ -3233,7 +3233,7 @@
     color: #008;
   }
 
-  /* a markup tag name */
+  /* a markup Tag name */
   .atn {
     color: #606;
   }

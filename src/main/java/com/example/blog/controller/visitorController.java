@@ -1,6 +1,6 @@
 package com.example.blog.controller;
 
-import com.example.blog.service.UserService;
+
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
@@ -18,8 +18,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class visitorController {
 
-    @Autowired
-    UserService userService;
 
     @RequestMapping("/")
     public String index(){
@@ -46,21 +44,7 @@ public class visitorController {
         return "types";
     }
 
-    @RequestMapping("/login")
-    public String tologin(String usernmae, String password, Model model){
-        Subject subject = SecurityUtils.getSubject();
-        UsernamePasswordToken token = new UsernamePasswordToken();
-        try {
-            subject.login(token);
-            return "main";
-        }catch (UnknownAccountException e){
-            model.addAttribute("msg","此账号不存在");
-            return "login";
-        }catch (IncorrectCredentialsException e){
-            model.addAttribute("msg","密码错误");
-            return "login";
-        }
-    }
+
 
 
 

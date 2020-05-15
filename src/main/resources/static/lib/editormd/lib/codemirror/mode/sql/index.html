@@ -49,7 +49,7 @@ SELECT SQL_NO_CACHE DISTINCT
 	LIMIT 1 OFFSET 0;
 </textarea>
             </form>
-            <p><strong>MIME types defined:</strong> 
+            <p><strong>MIME types defined:</strong>
             <code><a href="?mime=text/x-sql">text/x-sql</a></code>,
             <code><a href="?mime=text/x-mysql">text/x-mysql</a></code>,
             <code><a href="?mime=text/x-mariadb">text/x-mariadb</a></code>,
@@ -61,7 +61,7 @@ SELECT SQL_NO_CACHE DISTINCT
 <script>
 window.onload = function() {
   var mime = 'text/x-mariadb';
-  // get mime type
+  // get mime Type
   if (window.location.href.indexOf('mime=') > -1) {
     mime = window.location.href.substr(window.location.href.indexOf('mime=') + 5);
   }

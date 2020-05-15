@@ -5,74 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>分类</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
-  <link rel="stylesheet" href="../static/css/me.css">
+  <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
 </head>
 <body>
-
   <!--导航-->
   <div th:replace="~{/common/admin-common::nav}"></div>
-  <!--中间内容-->
+
+
+
+<!--    中间内容-->
   <div  class="m-container-small m-padded-tb-big">
     <div class="ui container">
-      <!--header-->
+      <!--标题框-->
       <div class="ui top attached segment">
         <div class="ui middle aligned two column grid">
           <div class="column">
             <h3 class="ui teal header">分类</h3>
           </div>
           <div class="right aligned column">
-            共 <h2 class="ui orange header m-inline-block m-text-thin"> 14 </h2> 个
+            共 <h2 class="ui orange header m-inline-block m-text-thin" th:text="${types.size()}"></h2> 个
+          </div>
+        </div>
+      </div>
+  <!--  显示分类-->
+      <div class="ui attached segment m-padded-tb-large">
+        <div class="ui labeled button m-margin-tb-tiny" th:each="type:${types}">
+          <a href="#" class="ui basic teal button" th:text="${type.getName()}"></a>
+          <div class="ui basic teal left pointing label">24</div>
+        </div>
+      </div>
+
+<!--          新增分类功能-->
+      <div class="ui top attached segment">
+        <div class="ui middle aligned two column grid">
+          <!--标题-->
+          <div class="column">
+            <h3 class="ui teal header">新增分页</h3>
+          </div>
+          <!--from表单，与div有间距-->
+          <div class="ui attached segment m-padded-tb-large">
+            <form th:action="@{/type/add}" method="post" class="ui form">
+              <div class="field">
+                <div class="ui left labeled input">
+                  <label class="ui teal basic label">分类</label>
+                  <input type="text" name="type" placeholder="新增分类名称">
+                </div>
+              </div>
+
+              <div class="field">
+                <div class="ui left aligned container">
+                  <input type="submit" class="ui button" value="新增分类"></input>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
 
-      <div class="ui attached segment m-padded-tb-large">
-        <div class="ui labeled button m-margin-tb-tiny">
-          <a href="#" class="ui basic teal button">思考与感悟</a>
-          <div class="ui basic teal left pointing label">24</div>
-        </div>
-        <div class="ui labeled button m-margin-tb-tiny">
-          <a href="#" class="ui basic  button">开发者手册</a>
-          <div class="ui basic  left pointing label">24</div>
-        </div>
-        <div class="ui labeled button m-margin-tb-tiny">
-          <a href="#" class="ui basic  button">开发者手册</a>
-          <div class="ui basic  left pointing label">24</div>
-        </div>
-        <div class="ui labeled button m-margin-tb-tiny">
-          <a href="#" class="ui basic  button">开发者手册</a>
-          <div class="ui basic  left pointing label">24</div>
-        </div>
-        <div class="ui labeled button m-margin-tb-tiny">
-          <a href="#" class="ui basic  button">开发者手册</a>
-          <div class="ui basic  left pointing label">24</div>
-        </div>
-        <div class="ui labeled button m-margin-tb-tiny">
-          <a href="#" class="ui basic  button">清单</a>
-          <div class="ui basic  left pointing label">24</div>
-        </div>
-        <div class="ui labeled button m-margin-tb-tiny">
-          <a href="#" class="ui basic  button">清单</a>
-          <div class="ui basic  left pointing label">24</div>
-        </div>
-        <div class="ui labeled button m-margin-tb-tiny">
-          <a href="#" class="ui basic  button">清单</a>
-          <div class="ui basic  left pointing label">24</div>
-        </div>
-        <div class="ui labeled button m-margin-tb-tiny">
-          <a href="#" class="ui basic  button">清单</a>
-          <div class="ui basic  left pointing label">24</div>
-        </div>
-        <div class="ui labeled button m-margin-tb-tiny">
-          <a href="#" class="ui basic  button">清单</a>
-          <div class="ui basic  left pointing label">24</div>
-        </div>
-        <div class="ui labeled button m-margin-tb-tiny">
-          <a href="#" class="ui basic  button">清单</a>
-          <div class="ui basic  left pointing label">24</div>
-        </div>
-      </div>
-
+<!--      该分类下显示的内容-->
       <div class="ui top attached teal segment">
         <div class="ui padded vertical segment m-padded-tb-large m-mobile-lr-clear">
           <div class="ui mobile reversed stackable grid">
@@ -271,7 +261,12 @@
     $('.menu.toggle').click(function () {
       $('.m-item').toggleClass('m-mobile-hide');
     });
-
+    var msg = '${msg}';
+    if (msg==="添加成功"){
+      alert("添加成功")
+    }if(msg==="添加失败"){
+      alert("添加失败")
+    }
   </script>
 </body>
 </html>

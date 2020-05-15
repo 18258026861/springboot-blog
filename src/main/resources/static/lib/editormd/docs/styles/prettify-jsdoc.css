@@ -21,13 +21,13 @@
   font-style: normal;
 }
 
-/* a comment */
+/* a Comment */
 .com {
   font-weight: normal;
   font-style: italic;
 }
 
-/* a type name */
+/* a Type name */
 .typ {
   color: #000000;
   font-weight: normal;
@@ -62,7 +62,7 @@
   font-style: normal;
 }
 
-/* a markup tag name */
+/* a markup Tag name */
 .tag {
   color: #006400;
   font-weight: normal;

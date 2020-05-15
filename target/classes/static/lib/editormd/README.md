@@ -65,7 +65,7 @@ bower install editor.md
 ```html
 <link rel="stylesheet" href="editor.md/css/editormd.min.css" />
 <div id="editor">
-    <!-- Tips: Editor.md can auto append a `<textarea>` tag -->
+    <!-- Tips: Editor.md can auto append a `<textarea>` Tag -->
     <textarea style="display:none;">### Hello Editor.md !</textarea>
 </div>
 <script src="jquery.min.js"></script>
@@ -103,7 +103,7 @@ If you using modular script loader:
     $(function() {
 	    var testView = editormd.markdownToHTML("test-markdown-view", {
             // markdown : "[TOC]\n### Hello world!\n## Heading 2", // Also, you can dynamic set Markdown text
-            // htmlDecode : true,  // Enable / disable HTML tag encode.
+            // htmlDecode : true,  // Enable / disable HTML Tag encode.
             // htmlDecode : "style,script,iframe",  // Note: If enabled, you should filter some dangerous HTML tags for website security.
         });
     });
@@ -167,7 +167,7 @@ Editor.md options and default values:
     dialogMaskBgColor    : "#fff",
     dialogMaskOpacity    : 0.1,
     fontSize             : "13px",
-    saveHTMLToTextarea   : false,          // If enable, Editor will create a <textarea name="{editor-id}-html-code"> tag save HTML code for form post to server-side.
+    saveHTMLToTextarea   : false,          // If enable, Editor will create a <textarea name="{editor-id}-html-code"> Tag save HTML code for form post to server-side.
     disabledKeyMaps      : [],
     
     onload               : function() {},
@@ -194,7 +194,7 @@ Editor.md options and default values:
     tocDropdown          : false,          // Enable/disable Table Of Contents dropdown menu
     tocContainer         : "",             // Custom Table Of Contents Container Selector
     tocStartLevel        : 1,              // Said from H1 to create ToC
-    htmlDecode           : false,          // Open the HTML tag identification 
+    htmlDecode           : false,          // Open the HTML Tag identification 
     pageBreak            : true,           // Enable parse page break [========]
     atLink               : true,           // for @link
     emailLink            : true,           // for email address auto link
@@ -219,7 +219,7 @@ Editor.md options and default values:
             return editormd.toolbarHandlers.lowercase;
         }
     },
-    toolbarCustomIcons   : {               // using html tag create toolbar icon, unused default <a> tag.
+    toolbarCustomIcons   : {               // using html Tag create toolbar icon, unused default <a> Tag.
         lowercase        : "<a href=\"javascript:;\" title=\"Lowercase\" unselectable=\"on\"><i class=\"fa\" name=\"lowercase\" style=\"font-size:24px;margin-top: -10px;\">a</i></a>",
         "ucwords"        : "<a href=\"javascript:;\" title=\"ucwords\" unselectable=\"on\"><i class=\"fa\" name=\"ucwords\" style=\"font-size:20px;margin-top: -3px;\">Aa</i></a>"
     },

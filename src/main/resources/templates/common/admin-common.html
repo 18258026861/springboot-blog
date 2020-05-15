@@ -17,8 +17,8 @@
                 <div class="ui dropdown item">
                 <!--      头像图-->
                     <img th:src="@{/images/jlq.png}" class="ui avatar image">
-                    尹振宇
-                    <a href="@{/admin/logout}" class="item">注销</a>
+                    <span th:text="${session.admin}"></span>
+                    <a th:href="@{/admin/logout}" class="item">注销</a>
                 </div>
                 <!--   下标-->
 
