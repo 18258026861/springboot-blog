@@ -10,9 +10,9 @@
         <div class="ui inverted secondary stackable menu">
             <!--  logo-->
             <h2 class="ui teal header item">管理后台</h2>
-            <a th:href="@{/admin/blogs}" class=" m-item item m-mobile-hide"><i class="home icon"></i>管理首页</a>
-            <a th:href="@{/admin/types}" class="item "><i class="idea icon"></i>管理分类</a>
-            <a th:href="@{/admin/tags}" class="item "><i class="tags icon"></i>管理标签</a>
+            <a th:href="@{/admin/blogs}" th:class="${active=='blogs'?'m-item item m-mobile-hide active':'m-item item m-mobile-hide'}"><i class="home icon"></i>管理首页</a>
+            <a th:href="@{/admin/types}" th:class="${active=='types'?'item active':'item'}"><i class="idea icon"></i>管理分类</a>
+            <a th:href="@{/admin/tags}" th:class="${active=='tags'?'item active':'item'}"><i class="tags icon"></i>管理标签</a>
             <div class="right menu">
                 <div class="ui dropdown item">
                 <!--      头像图-->
@@ -20,12 +20,6 @@
                     <span th:text="${session.admin}"></span>
                     <a th:href="@{/admin/logout}" class="item">注销</a>
                 </div>
-                <!--   下标-->
-
-
-
-
-
             </div>
         </div>
     </div>

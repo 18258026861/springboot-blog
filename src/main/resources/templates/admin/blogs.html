@@ -10,7 +10,7 @@
 <body>
 
   <!--导航-->
-<nav th:replace="~{/common/admin-common::nav}"></nav>
+<nav th:replace="~{/common/admin-common::nav(active='blogs')}"></nav>
   <div class="ui attached pointing menu">
     <div class="ui container">
       <div class="right menu">
@@ -51,11 +51,13 @@
         </div>
       </form>
 
-      <table class="ui celled table">
+      <table class="ui compact teal table">
         <thead>
           <tr>
             <th></th>
             <th>标题</th>
+            <th>分类</th>
+            <th>推荐</th>
             <th>更新时间</th>
             <th>操作</th>
           </tr>
@@ -64,6 +66,8 @@
           <tr>
             <td>1</td>
             <td>刻意练习清单</td>
+            <td>web</td>
+            <td>是</td>
             <td>2017-10-02 09:45</td>
             <td>
               <a href="#" class="ui mini teal basic button">编辑</a>
@@ -89,7 +93,6 @@
   <br>
   <br>
   <!--底部footer-->
-<footer th:replace="~{/common/admin-common::foot}"></footer>
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
 

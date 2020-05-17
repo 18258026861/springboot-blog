@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>修改分类信息</title>
+    <script th:src="@{/js/jquery-3.4.1.js}"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+    <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
+</head>
+<script>
+    function a() {
+        $.ajax({
+            url : "/type/typeExist",
+            data : {"type" :$("#typename").val()},
+            success :function (data) {
+                $("#typeInfo").css("color", "red");
+                $("#typeInfo").html(data)
+            }
+        })
+    };
+
+</script>
+<body>
+<!--导航-->
+<div th:replace="~{/common/admin-common::nav}"></div>
+
+
+<!--    中间内容-->
+<div  class="m-container-small m-padded-tb-big">
+    <div class="ui container">
+        <!--          新增分类功能-->
+        <div class="ui top attached segment">
+            <div class="ui middle aligned two column grid">
+                <!--标题-->
+                <div class="column">
+                    <h3 class="ui teal header">新增分类</h3>
+                </div>
+                <!--from表单，与div有间距-->
+                <div class="ui attached segment m-padded-tb-large">
+                    <form th:action="@{/type/update}" class="ui form">
+                        <div class="field">
+                            <input type="hidden" name="id" th:value="${type.getId()}">
+                            <div class="ui left labeled input">
+                                <label class="ui teal basic label">分类</label>
+                                <input type="text" id="typename" name="name" th:value="${type.getName()}" onblur="a()">
+                            </div>
+                        </div>
+                        <p><span id="typeInfo"></span></p>
+                        <!--按钮-->
+                        <div class="field">
+                            <div class="ui left aligned container">
+                                <input type="submit" class="ui button" value="修改"></input>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+<br>
+<br>
+<!--底部footer-->
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
+
+</body>
+</html>

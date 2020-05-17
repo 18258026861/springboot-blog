@@ -2,23 +2,53 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
+    <script th:src="@{/js/jquery-3.4.1.js}"></script>
     <title>Title</title>
+    <script>
+        function a() {
+            $.ajax({
+                url : "/admin/username",
+                //data用于给controller传递值
+                data : {"username" :$("#username").val()},
+                success :function (data) {
+                    $("#usernameInfo").css("color", "red");
+                    $("#usernameInfo").html(data)
+                }
+            })
+        };
+        function b() {
+            $.ajax({
+                url : "/admin/password",
+                //data用于给controller传递值
+                data : {"password" :$("#password").val()},
+                success :function (data) {
+                    $("#passwordInfo").css("color", "red");
+                    $("#passwordInfo").html(data)
+                }
+            })
+        }
+    </script>
 </head>
 <body>
     <p th:text="${msg}" style=""></p>
 <form class="field" th:action="@{/admin/login}" method="post">
-    <img class="mb-4" th:src="@{images/txx.png}" alt="" width="72" height="72">
+    <img class="mb-4" th:src="@{/images/txx.png}" alt="">
     <h1 class="h3 mb-3 font-weight-normal" >管理员登录</h1>
     <p><label class="sr-only">Username</label>
-        <input type="text" class="form-control" name="username"  required="" autofocus="">
+        <input type="text" class="form-control" id="username" name="username" onblur="a()">
     </p>
+    <span id="usernameInfo"></span>
     <p><label class="sr-only">Password</label>
-        <input type="password" class="form-control" name="password"  required="">
+        <input type="password" class="form-control" id="password" name="password" onblur="b()" required="required">
     </p>
+    <span id="passwordInfo"></span>
     <p>
         <button class="btn btn-lg btn-primary btn-block" type="submit" >登录</button>
     </p>
 
 </form>
+<seript>
+
+</seript>
 </body>
 </html>

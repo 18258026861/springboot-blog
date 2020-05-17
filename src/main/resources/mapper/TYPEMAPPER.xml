@@ -7,16 +7,21 @@
         select * from t_type
     </select>
 
-    <select id="queryType" resultType="Type">
+    <select id="queryTypeByName" resultType="Type">
+        select * from t_type where name = #{name}
+    </select>
+
+    <select id="queryTypeById" resultType="Type">
         select * from t_type where id = #{id}
     </select>
 
-    <insert id="addType" parameterType="Type" useGeneratedKeys="true" keyProperty="id">
-        insert into t_type(name) values(#{name})
+
+    <insert id="addType" keyProperty="id" parameterType="java.lang.String">
+        insert into t_type(name) values (#{name})
     </insert>
 
     <delete id="deleteType">
-        delete from t_type where id = #{id}
+        delete from t_type where name = #{name}
     </delete>
 
     <update id="updateType" parameterType="Type">

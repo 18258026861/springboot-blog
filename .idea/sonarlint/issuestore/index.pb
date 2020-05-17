@@ -29,3 +29,5 @@ m
 =src/main/java/com/example/blog/controller/TypeController.java,2\d\2d6fbfbd6adfaa648698d6b8d9337e7331bc6167
 k
 ;src/main/java/com/example/blog/service/TypeServiceImpl.java,e\7\e78473ef54011535e72acf2d84f5493e3264f82a
+h
+8src/test/java/com/example/blog/BlogApplicationTests.java,e\7\e759f366902bda8a953b1b9654b54e60451896a9
