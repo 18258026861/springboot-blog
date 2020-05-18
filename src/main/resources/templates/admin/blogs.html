@@ -23,30 +23,23 @@
   <!--中间内容-->
   <div  class="m-container-small m-padded-tb-big">
     <div class="ui container">
-      <form action="#" method="post" class="ui segment form">
+      <form th:action="@{/blog/query}" method="post" class="ui segment form">
         <div class="inline fields">
           <div class="field">
             <input type="text" name="title" placeholder="标题">
           </div>
           <div class="field">
             <div class="ui selection dropdown">
-              <input type="hidden" name="type">
+              <input type="hidden" name="typeId">
               <i class="dropdown icon"></i>
               <div class="default text">分类</div>
               <div class="menu">
-                <div class="item" data-value="1">错误日志</div>
-                <div class="item" data-value="2">开发者手册</div>
+                <div th:each="type:${types}" class="item" th:data-value="${type.id}" th:text="${type.getName()}"></div>
               </div>
             </div>
           </div>
           <div class="field">
-            <div class="ui checkbox">
-              <input type="checkbox" id="recommend" name="recommend">
-              <label for="recommend">推荐</label>
-            </div>
-          </div>
-          <div class="field">
-            <button class="ui mini teal basic button"><i class="search icon"></i>搜索</button>
+            <button class="ui mini teal basic button" type="submit"><i class="search icon"></i>搜索</button>
           </div>
         </div>
       </form>
@@ -57,18 +50,18 @@
             <th></th>
             <th>标题</th>
             <th>分类</th>
-            <th>推荐</th>
+            <th>发布</th>
             <th>更新时间</th>
             <th>操作</th>
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>1</td>
-            <td>刻意练习清单</td>
-            <td>web</td>
-            <td>是</td>
-            <td>2017-10-02 09:45</td>
+          <tr th:each="blog: ${blogs}">
+            <td th:text="${blog.getId()}"></td>
+            <td th:text="${blog.getTitle()}"></td>
+            <td th:text="${blog.getType().getName()}"></td>
+            <td th:text="${blog.isPblished()}"></td>
+            <td th:text="${blog.getUpdateTime()}"></td>
             <td>
               <a href="#" class="ui mini teal basic button">编辑</a>
               <a href="#" class="ui mini red basic button">删除</a>
@@ -82,7 +75,7 @@
                 <a class=" item">上一页</a>
                 <a class=" item">下一页</a>
               </div>
-              <a th:href="@{/admin/input}" class="ui mini right floated teal basic button">新增</a>
+              <a th:href="@{/admin/blogs-input}" class="ui mini right floated teal basic button">新增</a>
             </th>
           </tr>
         </tfoot>

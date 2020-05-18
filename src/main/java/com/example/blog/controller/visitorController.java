@@ -27,10 +27,6 @@ public class visitorController {
     public String blog(){
         return "blog";
     }
-    @RequestMapping("/tags")
-    public String tags(){
-        return "tags";
-    }
     @RequestMapping("/about")
     public String about(){
         return "about";

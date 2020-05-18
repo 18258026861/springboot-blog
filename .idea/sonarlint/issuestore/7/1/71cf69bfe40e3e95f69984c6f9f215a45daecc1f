@@ -1,6 +1,7 @@
 
 r
-java:S1128"URemove this unused import 'org.springframework.boot.autoconfigure.domain.EntityScan'.(›Ù¯8ÔÖìº¡.
-p	java:S116À"SRename this field "Comments" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ù˜‚ò8Ûçóº¡.
-c	java:S107"BConstructor has 15 parameters, which is greater than 7 authorized.(¶‡îÒúÿÿÿÿ8Ï˜’»¡.
-l	java:S116¾"ORename this field "Tags" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Şç¯ğ8Ûçóº¡.
+java:S1128"URemove this unused import 'org.springframework.boot.autoconfigure.domain.EntityScan'.(›Ù¯8Ê›¾ª¢.
+{
+java:S4144K"YUpdate this method so that its implementation is not identical to "getTypeId" on line 62.(È§¢íıÿÿÿÿ8×†¸¢.
+c	java:S107"BConstructor has 11 parameters, which is greater than 7 authorized.(æÜèşÿÿÿÿ8–ºö¿¢.
+o	java:S116"SRename this field "Comments" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(áíİì8ºÊé·¢.

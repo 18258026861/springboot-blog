@@ -1,6 +1,8 @@
 package com.example.blog.controller;
 
+import com.example.blog.pojo.Blog;
 import com.example.blog.pojo.Type;
+import com.example.blog.service.BlogService;
 import com.example.blog.service.TypeService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;
@@ -27,6 +29,8 @@ public class adminController {
 
     @Autowired
     TypeService typeService;
+    @Autowired
+    BlogService blogService;
 
         /*登录模块*/
     @RequestMapping("/tologin")
@@ -80,11 +84,14 @@ public class adminController {
     }
         /*跳转模块*/
     @RequestMapping("/blogs")
-    public String adminblogs(){
+    public String adminblogs(Model model){
+        model.addAttribute("blogs",blogService.queryBlogs());
+        model.addAttribute("types",typeService.queryTypes());
         return "admin/blogs";
     }
-    @RequestMapping("/input")
-    public String input(){
+    @RequestMapping("/blogs-input")
+    public String input(Model model){
+        model.addAttribute("types",typeService.queryTypes());
         return "admin/blogs-input";
     }
     @RequestMapping("/info")
@@ -97,9 +104,9 @@ public class adminController {
         model.addAttribute("types",types);
         return "admin/types";
     }
-    @RequestMapping("/tags")
-    public String tags(){
-        return "admin/tags";
+    @RequestMapping("/archives")
+    public String archives(){
+        return "archives";
     }
     @RequestMapping("/type-edit")
     public String typeedit(Long id,Model model){

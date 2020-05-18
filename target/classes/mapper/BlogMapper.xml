@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"        		   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.blog.dao.BlogMapper">
+
+    <resultMap id="blog" type="Blog">
+        <id property="id" column="bid"/>
+        <result property="title" column="title"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="typeId" column="type_id"/>
+        <result property="pblished" column="published"/>
+        <association property="type" javaType="Type">
+            <id property="id" column="tid"/>
+            <result property="name" column="tname"/>
+        </association>
+    </resultMap>
+<!--通过类型和title查询博客-->
+    <select id="queryBlogByName" parameterType="SearchBlog" resultMap="blog">
+        select b.published,b.id bid,b.title,t.name tname,b.create_time,b.type_id btid,t.id tid,t.name tname from t_blog b,t_type t
+        <where>
+            b.type_id = t.id
+            <if test="title!=null">
+                and b.title like CONCAT(CONCAT('%',#{title}),'%')
+             </if>
+             <if test="typeId !=null ">
+                and t.id = #{typeId}
+             </if>
+        </where>
+    </select>
+
+    <resultMap id="blogall" type="Blog">
+        <id property="id" column="id"/>
+        <result property="title" column="title"/>
+        <result property="content" column="content"/>
+        <result property="flag" column="flag"/>
+        <result property="views" column="views"/>
+        <result property="updateTime" column="update_time"/>
+        <result property="firstPicture" column="first_picture"/>
+        <result property="published" column="published"/>
+        <result property="description" column="description"/>
+        <result property="createTime" column="create_time"/>
+        <result property="typeId" column="type_id"/>
+        <association property="type" javaType="Type">
+            <id property="id" column="typeid"/>
+            <result property="name" column="typename"/>
+        </association>
+    </resultMap>
+
+
+    <select id="queryBlogs" resultMap="blog">
+        select b.id bid,b.title,t.name tname,b.create_time,b.type_id btid,t.id tid,t.name tname from t_blog b,t_type t where b.type_id = t.id
+    </select>
+
+
+
+
+    <insert id="addBlog" parameterType="Blog" keyProperty="id">
+        insert into t_blog(content,create_time,first_picture,published,title,type_id)
+                                 values(#{content},#{createTime},#{firstPicture},#{pblished},#{title},#{typeId})
+    </insert>
+
+    <delete id="deleteBlog" >
+        delete from t_blog where id = #{id}
+    </delete>
+
+
+
+</mapper>

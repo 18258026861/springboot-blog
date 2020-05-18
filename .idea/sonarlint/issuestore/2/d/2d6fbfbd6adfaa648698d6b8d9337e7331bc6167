@@ -1,12 +1,17 @@
 
-`
-java:S3752$">Add a "method" parameter to this "@RequestMapping" annotation.(·°»ëøÿÿÿÿ8ñì€í¡.
-`
-java:S3752.">Add a "method" parameter to this "@RequestMapping" annotation.(ôí Ùùÿÿÿÿ8í£¼Ş¡.
-x
-java:S1128"[Remove this unused import 'org.springframework.web.servlet.mvc.support.RedirectAttributes'.(ìçÚË8Š®Òî¡.
-`
-java:S3752">Add a "method" parameter to this "@RequestMapping" annotation.(ÚÏšÿÿÿÿÿ8²ïÊÆ¡.
 M
 java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8ñì€í¡.
-U	java:S106"9Replace this use of System.out or System.err by a logger.(ïÖöó8ñì€í¡.
+`
+java:S37528">Add a "method" parameter to this "@RequestMapping" annotation.(ôí Ùùÿÿÿÿ8í£¼Ş¡.
+`
+java:S3752$">Add a "method" parameter to this "@RequestMapping" annotation.(·°»ëøÿÿÿÿ8ñì€í¡.
+x
+java:S1192""VDefine a constant instead of duplicating this literal "redirect:/admin/types" 3 times.(æšÙøÿÿÿÿ8«·˜¢.
+`
+java:S3752">Add a "method" parameter to this "@RequestMapping" annotation.(ÚÏšÿÿÿÿÿ8²ïÊÆ¡.
+[
+java:S3752-">Add a "method" parameter to this "@RequestMapping" annotation.(Ä·è‡8öêø¢.
+x
+java:S1128"[Remove this unused import 'org.springframework.web.servlet.mvc.support.RedirectAttributes'.(ìçÚË8êçõŒ¢.
+[
+java:S1128"9Remove this unused import 'org.springframework.ui.Model'.(ê†ıÿÿÿÿ8½Ø”¢.

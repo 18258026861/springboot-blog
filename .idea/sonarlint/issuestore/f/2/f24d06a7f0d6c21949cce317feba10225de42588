@@ -1,28 +1,26 @@
 
-u
-java:S1128	"SRemove this unused import 'org.springframework.beans.factory.annotation.Autowired'.(¡ž¸Îùÿÿÿÿ8²©ì›¡.
-`
-java:S3752">Add a "method" parameter to this "@RequestMapping" annotation.(Í¹‹£øÿÿÿÿ8êÿªõ .
 [
-java:S1128"9Remove this unused import 'org.springframework.ui.Model'.(ê†ýÿÿÿÿ8…£±Æ¡.
-`
-java:S3752">Add a "method" parameter to this "@RequestMapping" annotation.(ãçÙÁûÿÿÿÿ8†è ‹¡.
-X
-java:S1128";Remove this unused import 'org.apache.shiro.SecurityUtils'.(ý™žß8…£±Æ¡.
-[
-java:S3752*">Add a "method" parameter to this "@RequestMapping" annotation.(¼©Ó8Â‚èŒ¡.
-[
-java:S3752&">Add a "method" parameter to this "@RequestMapping" annotation.(••šó8µåŒ¡.
-[
-java:S3752"">Add a "method" parameter to this "@RequestMapping" annotation.(¼Í»á8êÿªõ .
+java:S3752&">Add a "method" parameter to this "@RequestMapping" annotation.(¼©Ó8Â‚èŒ¡.
+i	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(êâÐ˜8ö˜Ö‘¡.
+s
+java:S1128"QRemove this unused import 'org.apache.shiro.authc.IncorrectCredentialsException'.(Ù’€ùÿÿÿÿ8…£±Æ¡.
+m
+java:S1128"KRemove this unused import 'org.apache.shiro.authc.UnknownAccountException'.(‚£¾ýÿÿÿÿ8…£±Æ¡.
 f
 java:S1128"IRemove this unused import 'org.apache.shiro.authc.UsernamePasswordToken'.(¤éŸª8…£±Æ¡.
 `
-java:S3752">Add a "method" parameter to this "@RequestMapping" annotation.(øÞÍ¡ýÿÿÿÿ8Œþ¬Š¡.
-s
-java:S1128"QRemove this unused import 'org.apache.shiro.authc.IncorrectCredentialsException'.(Ù’€ùÿÿÿÿ8…£±Æ¡.
-i	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(êâÐ˜8ö˜Ö‘¡.
-m
-java:S1128"KRemove this unused import 'org.apache.shiro.authc.UnknownAccountException'.(‚£¾ýÿÿÿÿ8…£±Æ¡.
+java:S3752">Add a "method" parameter to this "@RequestMapping" annotation.(Í¹‹£øÿÿÿÿ8êÿªõ .
 _
 java:S1128"=Remove this unused import 'org.apache.shiro.subject.Subject'.(ÿ­ëêøÿÿÿÿ8…£±Æ¡.
+[
+java:S3752"">Add a "method" parameter to this "@RequestMapping" annotation.(••šó8µåŒ¡.
+u
+java:S1128	"SRemove this unused import 'org.springframework.beans.factory.annotation.Autowired'.(¡ž¸Îùÿÿÿÿ8²©ì›¡.
+`
+java:S3752">Add a "method" parameter to this "@RequestMapping" annotation.(ãçÙÁûÿÿÿÿ8†è ‹¡.
+[
+java:S1128"9Remove this unused import 'org.springframework.ui.Model'.(ê†ýÿÿÿÿ8…£±Æ¡.
+X
+java:S1128";Remove this unused import 'org.apache.shiro.SecurityUtils'.(ý™žß8…£±Æ¡.
+[
+java:S3752">Add a "method" parameter to this "@RequestMapping" annotation.(¼Í»á8êÿªõ .

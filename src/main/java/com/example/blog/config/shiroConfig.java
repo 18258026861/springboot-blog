@@ -38,6 +38,9 @@ public class shiroConfig {
         map.put("/admin/types","authc");
         map.put("/admin/tags","authc");
         map.put("/admin/type-edit","authc");
+//        map.put("/admin/blog-input","authc");
+
+
 
         map.put("/type/*","authc");
 //      设置过滤路径

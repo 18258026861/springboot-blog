@@ -25,7 +25,7 @@
     </delete>
 
     <update id="updateType" parameterType="Type">
-        update t_type set name =#{name} where id=#{id}
+        update t_type set name=#{name} where id=#{id}
     </update>
 
 

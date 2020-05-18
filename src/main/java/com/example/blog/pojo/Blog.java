@@ -2,6 +2,7 @@ package com.example.blog.pojo;
 
 import org.springframework.boot.autoconfigure.domain.EntityScan;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -18,33 +19,64 @@ public class Blog {
     private String content;
 //    首图
     private String firstPicture;
-//    标记
-    private String flag;
     private Date createTime;
     private Date updateTime;
     private Integer views;
-    private boolean apperciation;
-    private boolean shareStatement;
     private boolean pblished;
-    private boolean  recommend;
+    private Long typeId;
+    private List<Comment> Comments = new ArrayList<>();
+    private Type type;
 
-    public Blog(Long id, String title, String content, String firstPicture, String flag, Date createTime, Date updateTime, Integer views, boolean apperciation, boolean shareStatement, boolean pblished, boolean recommend, List<Tag> tags, List<Comment> comments, Type type) {
+
+    public Blog(Long id, String title, String content, String firstPicture, Date createTime, Date updateTime, Integer views, boolean pblished, Long typeId, List<Comment> comments, Type type) {
         this.id = id;
         this.title = title;
         this.content = content;
         this.firstPicture = firstPicture;
-        this.flag = flag;
         this.createTime = createTime;
         this.updateTime = updateTime;
         this.views = views;
-        this.apperciation = apperciation;
-        this.shareStatement = shareStatement;
         this.pblished = pblished;
-        this.recommend = recommend;
-        Tags = tags;
+        this.typeId = typeId;
         Comments = comments;
         this.type = type;
     }
+
+    @Override
+    public String toString() {
+        return "Blog{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", content='" + content + '\'' +
+                ", firstPicture='" + firstPicture + '\'' +
+                ", createTime=" + createTime +
+                ", updateTime=" + updateTime +
+                ", views=" + views +
+                ", pblished=" + pblished +
+                ", typeId=" + typeId +
+                ", Comments=" + Comments +
+                ", type=" + type +
+                '}';
+    }
+
+    public Long getTypeId() {
+        return typeId;
+    }
+
+    public void setTypeId(Long typeId) {
+        this.typeId = typeId;
+    }
+
+    public Blog() {
+
+    }
+
+
+    public Long getTagId() {
+        return typeId;
+    }
+
+
 
     public Long getId() {
         return id;
@@ -78,13 +110,6 @@ public class Blog {
         this.firstPicture = firstPicture;
     }
 
-    public String getFlag() {
-        return flag;
-    }
-
-    public void setFlag(String flag) {
-        this.flag = flag;
-    }
 
     public Date getCreateTime() {
         return createTime;
@@ -110,44 +135,12 @@ public class Blog {
         this.views = views;
     }
 
-    public boolean isApperciation() {
-        return apperciation;
-    }
-
-    public void setApperciation(boolean apperciation) {
-        this.apperciation = apperciation;
-    }
-
-    public boolean isShareStatement() {
-        return shareStatement;
-    }
-
-    public void setShareStatement(boolean shareStatement) {
-        this.shareStatement = shareStatement;
-    }
-
     public boolean isPblished() {
         return pblished;
     }
 
     public void setPblished(boolean pblished) {
         this.pblished = pblished;
-    }
-
-    public boolean isRecommend() {
-        return recommend;
-    }
-
-    public void setRecommend(boolean recommend) {
-        this.recommend = recommend;
-    }
-
-    public List<Tag> getTags() {
-        return Tags;
-    }
-
-    public void setTags(List<Tag> tags) {
-        Tags = tags;
     }
 
     public List<Comment> getComments() {
@@ -164,36 +157,6 @@ public class Blog {
 
     public void setType(Type type) {
         this.type = type;
-    }
-
-    @Override
-    public String toString() {
-        return "Blog{" +
-                "id=" + id +
-                ", title='" + title + '\'' +
-                ", content='" + content + '\'' +
-                ", firstPicture='" + firstPicture + '\'' +
-                ", flag='" + flag + '\'' +
-                ", createTime=" + createTime +
-                ", updateTime=" + updateTime +
-                ", views=" + views +
-                ", apperciation=" + apperciation +
-                ", shareStatement=" + shareStatement +
-                ", pblished=" + pblished +
-                ", recommend=" + recommend +
-                ", Tags=" + Tags +
-                ", Comments=" + Comments +
-                ", type=" + type +
-                '}';
-    }
-
-    private List<Tag> Tags;
-
-    private List<Comment> Comments;
-
-    private Type type;
-
-    public Blog() {
     }
 
 }
