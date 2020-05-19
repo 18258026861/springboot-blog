@@ -24,35 +24,41 @@ public class TypeController {
     @Autowired
     TypeService typeService;
 
+
     @RequestMapping("/add")
-    public String add(String type,HttpSession session){
+    public String add(String type,Model model){
         Type type1 = typeService.queryTypeByName(type);
         if(type1==null){
             typeService.addType(type);
-            session.setAttribute("info","添加成功");
-        }
-        return "redirect:/admin/types";
+            model.addAttribute("typeInfo","添加成功");
+        }else
+            model.addAttribute("typeInfo","该分类已存在，添加失败");
+        model.addAttribute("types",typeService.queryTypes());
+        return "admin/types";
     }
     @RequestMapping("/delete")
-    public String delete(String name,HttpSession session){
+    public String delete(String name,Model model){
         int i = typeService.deleteType(name);
-        if(i>0){
-            session.setAttribute("info","删除成功");
-        }else
-            session.setAttribute("info","删除失败");
-        return "redirect:/admin/types";
+        if (i>0){
+            model.addAttribute("typeInfo","删除成功");
+        }else{
+            model.addAttribute("typeInfo","删除失败");
+        }
+        model.addAttribute("types",typeService.queryTypes());
+        return "admin/types";
     }
     @RequestMapping("/update")
-    public String update(Type type,HttpSession session){
+    public String update(Type type,Model model){
         int i = typeService.updateType(type);
         if (i>0){
-            session.setAttribute("info","修改成功");
+            model.addAttribute("typeInfo","修改成功");
         }else{
-            session.setAttribute("info","修改失败");
+            model.addAttribute("typeInfo","修改失败");
         }
-        return "redirect:/admin/types";
+        model.addAttribute("types",typeService.queryTypes());
+        return "admin/types";
     }
-
+//          ajax
     @RequestMapping("/typeExist")
     @ResponseBody
     public String username(String type){

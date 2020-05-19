@@ -11,11 +11,13 @@ import java.util.List;
  */
 public interface BlogService {
 
-    List<Blog> queryBlogByName(SearchBlog blog);
+    List<Blog> queryBlogByTitleAndType(SearchBlog blog);
+
+    Blog queryBlogByName(String title);
 
     List<Blog> queryBlogs();
 
-    Blog quertBlogById(Long id);
+    Blog queryBlogById(Long id);
 
     int addBlog(Blog blog);
 

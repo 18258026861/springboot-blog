@@ -1,6 +1,6 @@
 
-c
-java:S1192#"FDefine a constant instead of duplicating this literal "authc" 7 times.(Çù÷¤8ÚÜ€œ¡.
-g	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ÕÄËüÿÿÿÿ
-]	java:S1254"<This block of commented-out lines of code should be removed.(´™æèøÿÿÿÿ8ş·ú›¡.
-X	java:S125)"<This block of commented-out lines of code should be removed.(«„ş8¨‰¶Á¢.
+a
+java:S1192"FDefine a constant instead of duplicating this literal "authc" 7 times.(Çù÷¤8ÚÜ€œ¡.
+V	java:S125"<This block of commented-out lines of code should be removed.(«„ş8¨‰¶Á¢.
+[	java:S125"<This block of commented-out lines of code should be removed.(´™æèøÿÿÿÿ8ş·ú›¡.
+e	java:S101"MRename this class name to match the regular expression '^[A-Z][a-zA-Z0-9]*$'.(ÕÄËüÿÿÿÿ

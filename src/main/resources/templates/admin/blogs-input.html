@@ -4,9 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>博客发布</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
-  <link rel="stylesheet" href="../../static/lib/editormd/css/editormd.min.css">
-  <link rel="stylesheet" href="../../static/css/me.css">
+    <link href="../../static/images/bg.png" th:href="@{/images/bg.png}" rel="icon" type="image/x-ico">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+    <link rel="stylesheet" href="../../static/lib/editormd/css/editormd.min.css" th:href="@{/lib/editormd/css/editormd.min.css}">
+    <link rel="stylesheet" href="../../static/css/me.css" th:href="@{/css/me.css}">
 </head>
 <body>
   <!--导航-->
@@ -29,32 +30,26 @@
         <div class="field">
           <div class="ui left labeled input">
             <div class="ui selection compact teal basic dropdown label">
-              <input type="hidden" value="原创" >
-              <i class="dropdown icon"></i>
-              <div class="text">原创</div>
-              <div class="menu">
-                <div class="item" data-value="原创">原创</div>
-                <div class="item" data-value="转载">转载</div>
-                <div class="item" data-value="翻译">翻译</div>
-              </div>
+              <div class="text">标题</div>
             </div>
             <input type="text" name="title" placeholder="标题">
           </div>
         </div>
 <!--         博客内容行-->
-        <div class="field">
-            <textarea placeholder="博客内容" name="content">
-            </textarea>
-        </div>
+          <div class="required field">
+              <div class="" id="md-content" style="z-index: 1 !important;">
+                  <textarea placeholder="博客内容" name="content" style="display: none" ></textarea>
+              </div>
+          </div>
 
-<!--        这一行包含分类和标签-->
+
         <div class="two fields">
           <!--  分类-->
           <div class="field">
             <div class="ui left labeled action input">
               <label class="ui compact teal basic label">分类</label>
               <div class="ui fluid selection dropdown">
-                <input type="hidden" name="type">
+                <input type="hidden" name="typeId">
                 <i class="dropdown icon"></i>
                 <div class="default text">分类</div>
                 <div class="menu">
@@ -68,10 +63,14 @@
         <div class="field">
           <div class="ui left labeled input">
             <label class="ui teal basic label">首图</label>
-            <input type="text" name="indexPicture" placeholder="首图引用地址">
+            <input type="text" name="firstPicture" placeholder="首图引用地址">
           </div>
         </div>
-<!--        这一行包含文章的推荐，赞赏等选项-->
+<!--          简介-->
+          <div class="required field">
+              <textarea name="description" placeholder="博客描述..." maxlength="200" ></textarea>
+          </div>
+<!--        发布-->
         <div class="inline fields">
           <div class="field">
             <div class="ui checkbox">
@@ -80,11 +79,10 @@
             </div>
           </div>
         </div>
-<!--        发布，保存，包含-->
+<!--        发布-->
         <div class="ui right aligned container">
           <button type="button" class="ui button" onclick="window.history.go(-1)" >返回</button>
-<!--          <button class="ui secondary button">保存</button>-->
-          <button class="ui teal button">发布</button>
+          <button class="ui teal button" onclick= "if(confirm( '是否确定！ ')==false)return   false; ">发布</button>
         </div>
 
       </form>
@@ -96,7 +94,7 @@
   <!--底部footer-->
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
-<script src="../../static/lib/editormd/editormd.min.js"></script>
+<script src="../../static/lib/editormd/editormd.min.js" th:src="@{/lib/editormd/editormd.min.js}"></script>
 
   <script>
 
@@ -107,7 +105,8 @@
         width   : "100%",
         height  : 640,
         syncScrolling : "single",
-        path    : "../static/lib/editormd/lib/"
+        // path    : "../static/lib/editormd/lib/"
+        path    : "/lib/editormd/lib/"
       });
     });
     $('.menu.toggle').click(function () {
@@ -126,7 +125,21 @@
             type : 'empty',
             prompt: '标题：请输入博客标题'
           }]
-        }
+        },
+        content : {
+            identifier: 'content',
+            rules: [{
+                type : 'empty',
+                prompt: '内容：请输入博客内容'
+            }]
+        },
+          typeId : {
+              identifier: 'typeId',
+              rules: [{
+                  type : 'empty',
+                  prompt: '分类：请输入博客分类'
+              }]
+          },
       }
     });
 

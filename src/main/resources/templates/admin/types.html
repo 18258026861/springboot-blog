@@ -31,11 +31,11 @@
   <div  class="m-container-small m-padded-tb-big">
     <div class="ui container">
 <!--      提示框-->
-      <div class="ui success message" th:unless="${#strings.isEmpty(session.info)}" id="info">
+      <div class="ui success message" th:unless="${#strings.isEmpty(typeInfo)}" id="info">
           <!-- 点击隐藏info提示栏-->
         <i class="close icon" onclick="document.getElementById('info').style.display='none'"></i>
         <div class="header">提示: </div>
-        <p th:text="${session.info}"></p>
+        <p th:text="${typeInfo}"></p>
       </div>
 
       <!--分类显示-->
@@ -66,7 +66,7 @@
                   <td th:text="${type.getName()}"></td>
                   <td>
                     <a th:href="@{/admin/type-edit(id=${type.getId()})}" class="ui mini teal basic button">编辑</a>
-                    <a th:href="@{/type/delete(name=${type.getName()})}" class="ui mini red basic button">删除</a>
+                    <a th:href="@{/type/delete(name=${type.getName()})}" onclick= "if(confirm( '是否确定！ ')==false)return   false; " class="ui mini red basic button">删除</a>
                   </td>
                 </tr>
                 </tbody>
@@ -95,7 +95,7 @@
                 <!--按钮-->
               <div class="field">
                 <div class="ui left aligned container">
-                  <input type="submit" class="ui button" value="新增分类"></input>
+                  <input type="submit" class="ui button" value="新增分类" onclick= "if(confirm( '是否确定！ ')==false)return   false; "></input>
                 </div>
               </div>
             </form>

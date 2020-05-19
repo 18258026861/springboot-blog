@@ -19,9 +19,14 @@ public class BlogServiceImpl implements BlogService{
     BlogMapper blogMapper;
 
     @Override
-    public List<Blog> queryBlogByName(SearchBlog blog) {
-        List<Blog> blogs = blogMapper.queryBlogByName(blog);
+    public List<Blog> queryBlogByTitleAndType(SearchBlog blog) {
+        List<Blog> blogs = blogMapper.queryBlogByTitleAndType(blog);
         return blogs;
+    }
+
+    @Override
+    public Blog queryBlogByName(String title) {
+        return blogMapper.queryBlogByName(title);
     }
 
     @Override
@@ -30,8 +35,8 @@ public class BlogServiceImpl implements BlogService{
     }
 
     @Override
-    public Blog quertBlogById(Long id) {
-        return blogMapper.quertBlogById(id);
+    public Blog queryBlogById(Long id) {
+        return blogMapper.queryBlogById(id);
     }
 
     @Override

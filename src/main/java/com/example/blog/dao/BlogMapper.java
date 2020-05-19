@@ -18,11 +18,13 @@ import java.util.List;
 @Repository
 public interface BlogMapper {
 
-    List<Blog> queryBlogByName(SearchBlog blog);
+    List<Blog> queryBlogByTitleAndType(SearchBlog blog);
 
     List<Blog> queryBlogs();
 
-    Blog quertBlogById(Long id);
+    Blog queryBlogByName(String titile);
+
+    Blog queryBlogById(Long id);
 
     int addBlog(Blog blog);
 

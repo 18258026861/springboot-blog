@@ -1,8 +1,8 @@
 
 T
 java:S1128"7Remove this unused import 'com.example.blog.pojo.Type'.(ΝΞο£8πυ’Ά.
+p
+java:S1128"SRemove this unused import 'org.springframework.web.bind.annotation.RequestMapping'.(φ»Ώλ8πυ’Ά.
 X
 java:S1128
 ";Remove this unused import 'javax.servlet.http.HttpSession'.(ν¨τ8πυ’Ά.
-p
-java:S1128"SRemove this unused import 'org.springframework.web.bind.annotation.RequestMapping'.(φ»Ώλ8πυ’Ά.

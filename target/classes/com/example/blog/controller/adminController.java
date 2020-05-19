@@ -94,14 +94,19 @@ public class adminController {
         model.addAttribute("types",typeService.queryTypes());
         return "admin/blogs-input";
     }
+    @RequestMapping("/blogs-edit")
+    public String blogsedit(Long id,Model model){
+        model.addAttribute("blog",blogService.queryBlogById(id));
+        model.addAttribute("types",typeService.queryTypes());
+        return "admin/blogs-edit";
+    }
     @RequestMapping("/info")
     public String info(){
         return "admin/info";
     }
     @RequestMapping("/types")
     public String types(Model model){
-        List<Type> types = typeService.queryTypes();
-        model.addAttribute("types",types);
+        model.addAttribute("types",typeService.queryTypes());
         return "admin/types";
     }
     @RequestMapping("/archives")

@@ -1,6 +1,8 @@
 package com.example.blog.controller;
 
 
+import com.example.blog.service.BlogService;
+import com.example.blog.service.TypeService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
@@ -18,13 +20,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class visitorController {
 
+    @Autowired
+    BlogService blogService;
+    @Autowired
+    TypeService typeService;
 
     @RequestMapping("/")
-    public String index(){
+    public String index(Model model){
+        model.addAttribute("blogs",blogService.queryBlogs());
+        model.addAttribute("types",typeService.queryTypes());
         return "index";
     }
     @RequestMapping("/blog")
-    public String blog(){
+    public String blog(Long id,Model model){
+        model.addAttribute("blog",blogService.queryBlogById(id));
         return "blog";
     }
     @RequestMapping("/about")
@@ -39,6 +48,7 @@ public class visitorController {
     public String types(){
         return "types";
     }
+
 
 
 

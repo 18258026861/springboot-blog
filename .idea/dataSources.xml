@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="springboot@localhost" uuid="882feb31-bbff-4c68-bd63-1cc41acccc20">
+    <data-source source="LOCAL" name="blog@localhost" uuid="57c92fef-ea34-4660-90c8-c67287490db4">
       <driver-ref>mysql.8</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>com.mysql.cj.jdbc.Driver</jdbc-driver>
-      <jdbc-url>jdbc:mysql://localhost:3306/springboot</jdbc-url>
+      <jdbc-url>jdbc:mysql://localhost:3306/blog</jdbc-url>
     </data-source>
   </component>
 </project>

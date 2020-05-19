@@ -30,52 +30,76 @@ public class BlogController {
     TypeService typeService;
 
     @RequestMapping("/add")
-    public String add(@RequestParam(value = "title")String title,
+    public String add(String title,boolean pblished,Long typeId,String content,String description,
     @RequestParam(value = "firstPicture",required = false)String firstPicture,
-    @RequestParam(value = "pblished",required = false)boolean pblished,
-    @RequestParam(value = "typeId",required = false)Long typeId,
-    @RequestParam(value = "content",required = false)String content,
-                      HttpSession session){
-        Blog blog = new Blog();
-        blog.setTitle(title);
-        blog.setContent(content);
-        blog.setTypeId(typeId);
-        blog.setCreateTime(new Date());
-        blog.setFirstPicture(firstPicture);
-        blog.setPblished(pblished);
-        int i = blogService.addBlog(blog);
-        if(i>0){
-            session.setAttribute("bloginfo","添加成功");
+                      Model model){
+
+        Blog blog1 = blogService.queryBlogByName(title);
+        if(blog1==null){
+            Blog blog = new Blog();
+            blog.setTitle(title);
+            blog.setContent(content);
+            blog.setTypeId(typeId);
+            blog.setCreateTime(new Date());
+            blog.setUpdateTime(new Date());
+            blog.setFirstPicture(firstPicture);
+            blog.setPblished(pblished);
+            blog.setViews(0);
+            blog.setDescription(description);
+            int i = blogService.addBlog(blog);
+            if(i>0){
+                model.addAttribute("blogInfo","添加成功");
+            }else
+                model.addAttribute("blogInfo","添加失败");
+            model.addAttribute("blogs",blogService.queryBlogs());
+            model.addAttribute("types",typeService.queryTypes());
         }else
-            session.setAttribute("bloginfo","添加失败");
-        return "redirect:/admin/blogs";
+            model.addAttribute("blogInfo","该标题已存在");
+        return "admin/blogs";
     }
 
     @RequestMapping("/update")
-    public String update(Blog blog,HttpSession session){
+    public String update(Long id, String title,boolean pblished, Long typeId, String content,String description,
+                      @RequestParam(value = "firstPicture",required = false)String firstPicture,
+                      Model model){
+        Blog blog = new Blog();
+        blog.setId(id);
+        blog.setTitle(title);
+        blog.setContent(content);
+        blog.setTypeId(typeId);
+        blog.setUpdateTime(new Date());
+        blog.setFirstPicture(firstPicture);
+        blog.setPblished(pblished);
+        blog.setDescription(description);
         int i = blogService.updateBlog(blog);
         if(i>0){
-            session.setAttribute("bloginfo","修改成功");
+            model.addAttribute("bloginfo","修改成功");
         }else
-            session.setAttribute("bloginfo","修改失败");
-        return "redirect:/admin/blogs";
+            model.addAttribute("bloginfo","修改失败");
+        model.addAttribute("blogs",blogService.queryBlogs());
+        model.addAttribute("types",typeService.queryTypes());
+        return "admin/blogs";
+    }
+
+    @RequestMapping("/query")
+    public String query(@RequestParam(value = "title",required = false)String title,
+                        @RequestParam(value = "typeId",required = false)Long typeId,
+                        Model model){
+        SearchBlog blog = new SearchBlog(title,typeId);
+        model.addAttribute("types",typeService.queryTypes());
+        model.addAttribute("blogs",blogService.queryBlogByTitleAndType(blog));
+        return "admin/blogs";
     }
 
     @RequestMapping("/delete")
-    public String delete(Long id,HttpSession session){
+    public String delete(Long id,Model model){
         int i = blogService.deleteBlog(id);
         if(i>0){
-            session.setAttribute("bloginfo","删除成功");
+            model.addAttribute("bloginfo","删除成功");
         }else
-            session.setAttribute("bloginfo","删除失败");
-        return "redirect:/admin/blogs";
-    }
-    @RequestMapping("/query")
-//                      required可以为空
-    public String query(@RequestParam(value = "title",required = false)String title,@RequestParam(value = "typeId",required = false)Long typeId, Model model){
-        SearchBlog blog = new SearchBlog(title,typeId);
+            model.addAttribute("bloginfo","删除失败");
+        model.addAttribute("blogs",blogService.queryBlogs());
         model.addAttribute("types",typeService.queryTypes());
-        model.addAttribute("blogs",blogService.queryBlogByName(blog));
         return "admin/blogs";
     }
 

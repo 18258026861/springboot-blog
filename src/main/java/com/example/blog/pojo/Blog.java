@@ -14,21 +14,30 @@ import java.util.List;
 public class Blog {
 
     private Long id;
-    private String title;
 //    内容
     private String content;
 //    首图
-    private String firstPicture;
     private Date createTime;
+    private String firstPicture;
+    private boolean pblished;
+    private String title;
     private Date updateTime;
     private Integer views;
-    private boolean pblished;
     private Long typeId;
     private List<Comment> Comments = new ArrayList<>();
     private Type type;
+    private String author = "尹振宇";
+    private String description;
 
+    public String getAuthor() {
+        return author;
+    }
 
-    public Blog(Long id, String title, String content, String firstPicture, Date createTime, Date updateTime, Integer views, boolean pblished, Long typeId, List<Comment> comments, Type type) {
+    public void setAuthor(String author) {
+        this.author = author;
+    }
+
+    public Blog(Long id, String title, String content, String firstPicture, Date createTime, Date updateTime, Integer views, boolean pblished, Long typeId, List<Comment> comments, Type type,String description) {
         this.id = id;
         this.title = title;
         this.content = content;
@@ -40,6 +49,7 @@ public class Blog {
         this.typeId = typeId;
         Comments = comments;
         this.type = type;
+        this.description =description;
     }
 
     @Override
@@ -56,7 +66,16 @@ public class Blog {
                 ", typeId=" + typeId +
                 ", Comments=" + Comments +
                 ", type=" + type +
+                ", description=" + description +
                 '}';
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public Long getTypeId() {

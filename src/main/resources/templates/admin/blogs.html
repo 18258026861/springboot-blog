@@ -23,6 +23,15 @@
   <!--中间内容-->
   <div  class="m-container-small m-padded-tb-big">
     <div class="ui container">
+      <!--      提示框-->
+      <div class="ui success message" th:unless="${#strings.isEmpty(bloginfo)}" id="info">
+        <!-- 点击隐藏info提示栏-->
+        <i class="close icon" onclick="document.getElementById('info').style.display='none'"></i>
+        <div class="header">提示: </div>
+        <p th:text="${bloginfo}"></p>
+      </div>
+  <div  class="m-container-small m-padded-tb-big">
+    <div class="ui container">
       <form th:action="@{/blog/query}" method="post" class="ui segment form">
         <div class="inline fields">
           <div class="field">
@@ -50,7 +59,7 @@
             <th></th>
             <th>标题</th>
             <th>分类</th>
-            <th>发布</th>
+            <th>状态</th>
             <th>更新时间</th>
             <th>操作</th>
           </tr>
@@ -60,11 +69,11 @@
             <td th:text="${blog.getId()}"></td>
             <td th:text="${blog.getTitle()}"></td>
             <td th:text="${blog.getType().getName()}"></td>
-            <td th:text="${blog.isPblished()}"></td>
+            <td th:text="${blog.isPblished()} ? '发布':'草稿'"></td>
             <td th:text="${blog.getUpdateTime()}"></td>
             <td>
-              <a href="#" class="ui mini teal basic button">编辑</a>
-              <a href="#" class="ui mini red basic button">删除</a>
+              <a th:href="@{/admin/blogs-edit(id=${blog.getId()})}"   class="ui mini teal basic button">编辑</a>
+              <a th:href="@{/blog/delete(id=${blog.getId()})}" onclick= "if(confirm( '是否确定！ ')==false)return   false; " class="ui mini red basic button">删除</a>
             </td>
           </tr>
         </tbody>
