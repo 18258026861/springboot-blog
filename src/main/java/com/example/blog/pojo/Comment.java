@@ -21,20 +21,45 @@ public class Comment {
 //    头像
     private String avatar;
 
-    private Blog blog;
+    private Long blogId;
+
+    private Long parentId;
 
 
     public Comment() {
     }
 
-    public Comment(Long id, List<Comment> reply, String nickname, Date createTime, String content, String avatar, Blog blog) {
+    public Long getBlogId() {
+        return blogId;
+    }
+
+    public void setBlogId(Long blogId) {
+        this.blogId = blogId;
+    }
+
+    public Comment(Long id, List<Comment> reply, String nickname, Date createTime, String content, String avatar, Long blogId, Long parentId) {
         this.id = id;
         this.reply = reply;
         this.nickname = nickname;
         this.createTime = createTime;
         this.content = content;
         this.avatar = avatar;
-        this.blog = blog;
+        this.blogId = blogId;
+        this.parentId = parentId;
+    }
+
+    @Override
+    public String toString() {
+        return "Comment{" +
+                "id=" + id +
+                ", reply=" + reply +
+                ", nickname='" + nickname + '\'' +
+                ", createTime=" + createTime +
+                ", content='" + content + '\'' +
+                ", avatar='" + avatar + '\'' +
+                ", blog=" + blogId +
+                ", parentId=" + parentId +
+                '}';
     }
 
     public Long getId() {
@@ -85,24 +110,13 @@ public class Comment {
         this.avatar = avatar;
     }
 
-    public Blog getBlog() {
-        return blog;
+
+
+    public Long getParentId() {
+        return parentId;
     }
 
-    public void setBlog(Blog blog) {
-        this.blog = blog;
-    }
-
-    @Override
-    public String toString() {
-        return "Comment{" +
-                "id=" + id +
-                ", reply=" + reply +
-                ", nickname='" + nickname + '\'' +
-                ", createTime=" + createTime +
-                ", content='" + content + '\'' +
-                ", avatar='" + avatar + '\'' +
-                ", blog=" + blog +
-                '}';
+    public void setParentId(Long parentId) {
+        this.parentId = parentId;
     }
 }

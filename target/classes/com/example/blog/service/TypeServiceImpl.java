@@ -1,6 +1,7 @@
 package com.example.blog.service;
 
 import com.example.blog.dao.TypeMaaper;
+import com.example.blog.pojo.Blog;
 import com.example.blog.pojo.Type;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -45,5 +46,10 @@ public class TypeServiceImpl implements TypeService{
     @Override
     public Type queryTypeById(Long id) {
         return typeMaaper.queryTypeById(id);
+    }
+
+    @Override
+    public List<Blog> queryBlogsByType(Long id) {
+        return typeMaaper.queryBlogsByType(id);
     }
 }

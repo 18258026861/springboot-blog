@@ -17,8 +17,10 @@
             <div class="right item">
                 <div class="ui icon inverted transparent input">
                     <!--    搜索框-->
-                    <input type="text" placeholder="Search....">
-                    <i class="search link icon"></i>
+                    <form th:action="@{/search}">
+                    <input name="search" type="text" placeholder="Search...." th:value="${search}">
+                    <i class="search link icon"><input type="submit"> </i>
+                    </form>
                 </div>
             </div>
         </div>
@@ -37,9 +39,11 @@
                     </div>
                 </div>
             </div>
+
             <div class="three wide column">
                 <h4 class="ui inverted header m-text-thin m-text-spaced">最新博客</h4>
             </div>
+            <!--联系方式-->
             <div class="three wide column">
                 <h4 class="ui inverted header m-text-thin m-text-spaced ">联系我</h4>
                 <div class="ui inverted link list">
@@ -47,6 +51,7 @@
                     <a href="#" class="item m-text-thin">QQ：1061603811</a>
                 </div>
             </div>
+            <!--博客介绍-->
             <div class="seven wide column">
                 <h4 class="ui inverted header m-text-thin m-text-spaced ">Blog</h4>
                 <p class="m-text-thin m-text-spaced m-opacity-mini">这是yzy个人博客</p>

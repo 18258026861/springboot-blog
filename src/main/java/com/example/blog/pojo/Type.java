@@ -1,5 +1,6 @@
 package com.example.blog.pojo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -11,15 +12,15 @@ public class Type {
     private Long id;
     private String name;
 
+    private List<Blog> blogs = new ArrayList<>();
 
     public Type() {
     }
 
-
-    public Type(Long id, String name) {
+    public Type(Long id, String name, List<Blog> blogs) {
         this.id = id;
         this.name = name;
-
+        this.blogs = blogs;
     }
 
     public Long getId() {
@@ -38,15 +39,20 @@ public class Type {
         this.name = name;
     }
 
+    public List<Blog> getBlogs() {
+        return blogs;
+    }
 
-
+    public void setBlogs(List<Blog> blogs) {
+        this.blogs = blogs;
+    }
 
     @Override
     public String toString() {
         return "Type{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
+                ", blogs=" + blogs +
                 '}';
     }
-
 }

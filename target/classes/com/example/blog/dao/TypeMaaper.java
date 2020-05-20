@@ -1,5 +1,6 @@
 package com.example.blog.dao;
 
+import com.example.blog.pojo.Blog;
 import com.example.blog.pojo.Type;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
@@ -25,4 +26,6 @@ public interface TypeMaaper {
     Type queryTypeByName(String name);
 
     Type queryTypeById(Long id);
+
+    List<Blog> queryBlogsByType(Long id);
 }

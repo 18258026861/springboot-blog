@@ -109,10 +109,7 @@ public class adminController {
         model.addAttribute("types",typeService.queryTypes());
         return "admin/types";
     }
-    @RequestMapping("/archives")
-    public String archives(){
-        return "archives";
-    }
+
     @RequestMapping("/type-edit")
     public String typeedit(Long id,Model model){
         Type type = typeService.queryTypeById(id);

@@ -3,6 +3,7 @@ package com.example.blog.service;
 import com.example.blog.dao.BlogMapper;
 import com.example.blog.pojo.Blog;
 import com.example.blog.pojo.SearchBlog;
+import com.example.blog.utils.MarkdownUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -53,4 +54,20 @@ public class BlogServiceImpl implements BlogService{
     public int updateBlog(Blog blog) {
         return blogMapper.updateBlog(blog);
     }
+
+    @Override
+    public List<Blog> queryBlogTitleOrContentBysearch(String search) {
+        return blogMapper.queryBlogTitleOrContentBysearch(search);
+    }
+
+    @Override
+    public Blog markToHTML(Long id) {
+        Blog blog = blogMapper.queryBlogById(id);
+        String content = blog.getContent();
+//        转换
+        blog.setContent(MarkdownUtils.markdownToHtmlExtensions(content));
+        return blog;
+    }
+
+
 }

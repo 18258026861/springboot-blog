@@ -19,10 +19,12 @@
         <div class="eleven wide column">
           <!--header-->
           <div class="ui top attached segment">
+            <!--博客标题栏，显示博客数量-->
             <div class="ui middle aligned two column grid">
               <div class="column">
                 <h3 class="ui teal header">博客</h3>
               </div>
+              <!--显示博客数量-->
               <div class="right aligned column">
                 共 <h2 class="ui orange header m-inline-block m-text-thin" th:text="${blogs.size()}"></h2> 篇
               </div>
@@ -32,20 +34,24 @@
           <!--content-->
           <div class="ui attached  segment">
 
+            <!--博客展示部分-->
             <div class="ui padded vertical segment m-padded-tb-large" th:each="blog: ${blogs}">
               <div class="ui mobile reversed stackable grid">
                 <div class="eleven wide column">
-                  <a th:href="@{/blog(id=${blog.getId()})}" class="ui header" th:text="${blog.getTitle()}"></a>
+                  <!--博客标题，点击跳转-->
+                  <h2  class="ui header" ><a th:href="@{/blog(id=${blog.getId()})}" th:text="${blog.getTitle()}" class="m-black" ></a></h2>
+                  <!--博客简介-->
                   <p class="m-text" th:text="${blog.getDescription()}"></p>
                   <div class="ui grid">
                     <div class="eleven wide column">
                       <div class="ui mini horizontal link list">
                         <div class="item">
+                          <!--作者头像-->
                           <img src="https://unsplash.it/100/100?image=1005" th:src="@{/images/jlq.png}" alt="" class="ui avatar image">
                           <!--作者-->
-                          <div class="content"><a href="#" class="header" th:text="${blog.author}"></a></div>
+                          <div class="content"><a class="header" th:text="${blog.author}"></a></div>
                         </div>
-                        <!--创建时间-->
+                        <!--更新时间-->
                         <div class="item">
                           <i class="calendar icon"></i><span th:text="${#dates.format(blog.updateTime,'yyyy-MM-dd')}"></span>
                         </div>
@@ -55,9 +61,9 @@
                         </div>
                       </div>
                     </div>
-                    <!--分类-->
+                    <!--博客所属分类-->
                     <div class="right aligned five wide column">
-                      <a th:href="@{/type}" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin" th:text="${blog.getType().getName()}"></a>
+                      <a th:href="@{/queryblogsbytype(id=${blog.getType().getId()})}" target="_blank" class="ui teal basic label m-padded-tiny m-text-thin" th:text="${blog.getType().getName()}"></a>
                     </div>
                   </div>
                 </div>
@@ -107,8 +113,8 @@
 
           </div>
 
-          <!--footer-->
-          <div class="ui bottom attached segment">
+          <!--上一页下一页-->
+          <!--<div class="ui bottom attached segment">
             <div class="ui middle aligned two column grid">
               <div class="column">
                 <a href="#" class="ui mini teal basic button">上一页</a>
@@ -117,7 +123,7 @@
                 <a href="#" class="ui mini teal basic button">下一页</a>
               </div>
             </div>
-          </div>
+          </div>-->
 
         </div>
 
@@ -138,7 +144,7 @@
             <div class="ui teal segment">
               <div class="ui fluid vertical menu" th:each="type: ${types}">
                 <a href="#" class="item" th:text="${type.getName()}">
-                  <div class="ui teal basic pointing label">13</div>
+                  <div class="ui teal basic pointing label" th:text="${#arrays.length(type.blogs)}">13</div>
                 </a>
               </div>
             </div>
@@ -150,27 +156,6 @@
           <div class="ui segments m-margin-top-large">
             <div class="ui secondary segment ">
               <i class="bookmark icon"></i>最新推荐
-            </div>
-            <div class="ui segment">
-              <a href="#" target="_blank" class="m-black m-text-thin">用户故事（User Story）</a>
-            </div>
-            <div class="ui segment" >
-              <a href="#" target="_blank" class="m-black m-text-thin">用户故事（User Story）</a>
-            </div>
-            <div class="ui segment">
-              <a href="#" target="_blank" class="m-black m-text-thin">用户故事（User Story）</a>
-            </div>
-            <div class="ui segment">
-              <a href="#" target="_blank" class="m-black m-text-thin">用户故事（User Story）</a>
-            </div>
-            <div class="ui segment">
-              <a href="#" target="_blank" class="m-black m-text-thin">用户故事（User Story）</a>
-            </div>
-            <div class="ui segment">
-              <a href="#" target="_blank" class="m-black m-text-thin">用户故事（User Story）</a>
-            </div>
-            <div class="ui segment">
-              <a href="#" target="_blank" class="m-black m-text-thin">用户故事（User Story）</a>
             </div>
             <div class="ui segment">
               <a href="#" target="_blank" class="m-black m-text-thin">用户故事（User Story）</a>

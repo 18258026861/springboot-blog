@@ -1,5 +1,6 @@
 package com.example.blog.service;
 
+import com.example.blog.pojo.Blog;
 import com.example.blog.pojo.Type;
 
 import java.util.List;
@@ -21,4 +22,6 @@ public interface TypeService {
     Type queryTypeByName(String name);
 
     Type queryTypeById(Long id);
+
+    List<Blog> queryBlogsByType(Long id);
 }

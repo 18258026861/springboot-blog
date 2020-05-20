@@ -4,11 +4,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>博客详情</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
-  <link rel="stylesheet" href="../static/css/typo.css">
-  <link rel="stylesheet" href="../static/css/animate.css">
-  <link rel="stylesheet" href="../static/lib/prism/prism.css">
-  <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css">
-  <link rel="stylesheet" href="../static/css/me.css">
+  <link rel="stylesheet" href="../static/css/typo.css" th:href="@{/css/typo.css}">
+  <link rel="stylesheet" href="../static/css/animate.css" th:href="@{/css/animate.css}">
+  <link rel="stylesheet" href="../static/lib/prism/prism.css" th:href="@{/lib/prism/prism.css}">
+  <link rel="stylesheet" href="../static/lib/tocbot/tocbot.css" th:href="@{/lib/tocbot/tocbot.css}">
+  <link rel="stylesheet" href="../static/css/me.css" th:href="@{/css/me.css}">
 </head>
 <body>
 
@@ -37,17 +37,15 @@
         <img th:src="@{${blog.getFirstPicture()}}" class="ui fluid rounded image">
       </div>
       <div class="ui  attached padded segment">
-        <!--内容-->
-        <div class="ui right aligned basic segment">
-          <div class="ui orange basic label">原创</div>
-        </div>
-
-        <h2 class="ui center aligned header" th:text="${blog.getTitle()}">关于刻意练习的清单</h2>
+<!--      内容-->
+<!--      标题-->
+        <h2 class="ui center aligned header" th:text="${blog.getTitle()}"></h2>
         <br>
-
-        <div th:text="${blog.getContent()}" id="content" class="typo  typo-selection js-toc-content m-padded-lr-responsive m-padded-tb-large">
-        </div>
+<!--      内容-->
+        <div name="content" th:utext="${blog.getContent()}" id="content" class="typo  typo-selection js-toc-content m-padded-lr-responsive m-padded-tb-large">
       </div>
+      </div>
+
       <div class="ui attached positive message">
         <!--博客信息-->
         <div class="ui middle aligned grid">
@@ -59,10 +57,11 @@
             </ui>
           </div>
           <div class="five wide column">
-            <img src="../static/images/wechat.jpg" alt="" class="ui right floated rounded bordered image" style="width: 110px">
+            <img src="../static/images/wechat.jpg" th:src="@{/images/wechat.jpg}" alt="" class="ui right floated rounded bordered image" style="width: 110px">
           </div>
         </div>
       </div>
+<!--      留言-->
       <div id="comment-container" class="ui bottom attached segment">
         <!--留言区域列表-->
         <div class="ui teal segment">
@@ -189,14 +188,27 @@
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/jquery.scrollto@2.1.2/jquery.scrollTo.min.js"></script>
+<script src="../../static/lib/editormd/editormd.min.js" th:src="@{/lib/editormd/editormd.min.js}"></script>
 
-<script src="../static/lib/prism/prism.js"></script>
-<script src="../static/lib/tocbot/tocbot.min.js"></script>
-<script src="../static/lib/qrcode/qrcode.min.js"></script>
-<script src="../static/lib/waypoints/jquery.waypoints.min.js"></script>
+
+  <script src="../static/lib/prism/prism.js" th:src="@{/lib/prism/prism.js}"></script>
+<script src="../static/lib/tocbot/tocbot.min.js" th:src="@{/lib/tocbot/tocbot.min.js}"></script>
+<script src="../static/lib/qrcode/qrcode.min.js" th:src="@{/lib/qrcode/qrcode.min.js}"></script>
+<script src="../static/lib/waypoints/jquery.waypoints.min.js" th:src="@{/lib/waypoints/jquery.waypoints.min.js}"></script>
   <!--/*/</th:block>/*/-->
 
   <script>
+    //初始化Markdown编辑器
+    var contentEditor;
+    $(function() {
+      contentEditor = editormd("md-content", {
+        width   : "100%",
+        height  : 640,
+        syncScrolling : "single",
+        // path    : "../static/lib/editormd/lib/"
+        path    : "/lib/editormd/lib/"
+      });
+    });
 
     $('.menu.toggle').click(function () {
       $('.m-item').toggleClass('m-mobile-hide');
@@ -208,14 +220,14 @@
       position: 'bottom center'
     });
 
-    tocbot.init({
+    /*tocbot.init({
       // Where to render the table of contents.
       tocSelector: '.js-toc',
       // Where to grab the headings to build the table of contents.
       contentSelector: '.js-toc-content',
       // Which headings to grab inside of the contentSelector element.
       headingSelector: 'h1, h2, h3',
-    });
+    });*/
 
     $('.toc.button').popup({
       popup : $('.toc-container.popup'),
@@ -228,8 +240,11 @@
       position: 'left center'
     });
 
+
+    var serurl = /*[[#{blog.serurl}]]*/"127.0.0.1:8080";
+    var url = /*[[@{/blog/{id}(id=${blog.id})}]]*/"";
     var qrcode = new QRCode("qrcode", {
-      text: "http://jindo.dev.naver.com/collie",
+      text: serurl+url,
       width: 110,
       height: 110,
       colorDark : "#000000",

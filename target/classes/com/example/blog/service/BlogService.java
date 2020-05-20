@@ -24,4 +24,9 @@ public interface BlogService {
     int deleteBlog(Long id);
 
     int updateBlog(Blog blog);
+
+    List<Blog> queryBlogTitleOrContentBysearch(String search);
+
+    Blog markToHTML(Long id);
+
 }

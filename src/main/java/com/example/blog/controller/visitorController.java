@@ -1,6 +1,8 @@
 package com.example.blog.controller;
 
 
+import com.example.blog.pojo.Blog;
+import com.example.blog.pojo.SearchBlog;
 import com.example.blog.service.BlogService;
 import com.example.blog.service.TypeService;
 import org.apache.shiro.SecurityUtils;
@@ -12,6 +14,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import javax.websocket.server.PathParam;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.List;
 
 /**
  * @author YZY
@@ -27,15 +35,17 @@ public class visitorController {
 
     @RequestMapping("/")
     public String index(Model model){
+        List<Blog> blogsort = blogService.queryBlogs();
         model.addAttribute("blogs",blogService.queryBlogs());
         model.addAttribute("types",typeService.queryTypes());
         return "index";
     }
     @RequestMapping("/blog")
     public String blog(Long id,Model model){
-        model.addAttribute("blog",blogService.queryBlogById(id));
+        model.addAttribute("blog",blogService.markToHTML(id));
         return "blog";
     }
+
     @RequestMapping("/about")
     public String about(){
         return "about";
@@ -45,8 +55,25 @@ public class visitorController {
         return "archives";
     }
     @RequestMapping("/types")
-    public String types(){
+    public String types(Model model){
+        model.addAttribute("types",typeService.queryTypes());
+        model.addAttribute("blogs",blogService.queryBlogs());
         return "types";
+    }
+
+    @RequestMapping("/queryblogsbytype")
+    public String queryblogsbytype(Long id,Model model){
+        model.addAttribute("blogs",typeService.queryBlogsByType(id));
+        model.addAttribute("types",typeService.queryTypes());
+        return "types";
+    }
+
+    @RequestMapping("/search")
+    public String search(@RequestParam(value = "search",required = false) String search, Model model){
+        model.addAttribute("types",typeService.queryTypes());
+        model.addAttribute("blogs",blogService.queryBlogTitleOrContentBysearch(search));
+        model.addAttribute("search",search);
+        return "index";
     }
 
 

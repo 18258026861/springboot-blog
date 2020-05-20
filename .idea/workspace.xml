@@ -2,25 +2,172 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4dd47f26-ed6a-4859-b7a8-59b43361fdc4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/blogs-edit.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/blog/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/blog/controller/BlogController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/blog/utils/MarkdownUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/accordion.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/accordion.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/accordion.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/accordion.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/ad.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/ad.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/api.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/api.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/breadcrumb.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/breadcrumb.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/button.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/button.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/card.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/card.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/checkbox.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/checkbox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/checkbox.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/checkbox.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/comment.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/comment.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/dimmer.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/dimmer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/dimmer.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/dimmer.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/divider.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/divider.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/dropdown.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/dropdown.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/dropdown.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/dropdown.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/feed.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/feed.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/flag.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/flag.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/form.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/form.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/form.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/form.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/grid.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/grid.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/header.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/header.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/icon.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/icon.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/image.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/image.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/input.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/input.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/item.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/item.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/label.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/label.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/list.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/list.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/loader.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/loader.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/menu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/menu.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/message.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/message.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/modal.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/modal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/modal.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/modal.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/nag.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/nag.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/nag.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/nag.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/popup.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/popup.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/popup.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/popup.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/progress.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/progress.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/progress.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/progress.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/rail.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/rail.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/rating.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/rating.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/rating.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/rating.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/reset.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/reset.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/reveal.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/reveal.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/search.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/search.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/search.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/segment.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/segment.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/shape.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/shape.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/shape.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/shape.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/sidebar.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/sidebar.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/sidebar.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/sidebar.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/site.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/site.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/site.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/site.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/state.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/state.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/statistic.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/statistic.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/step.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/step.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/sticky.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/sticky.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/sticky.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/sticky.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/tab.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/tab.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/tab.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/tab.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/table.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/table.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/transition.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/transition.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/transition.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/transition.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/video.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/video.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/video.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/video.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/visibility.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/components/visibility.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/semantic.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/semantic.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/semantic.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/semantic.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/themes/basic/assets/fonts/icons.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/themes/basic/assets/fonts/icons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/themes/basic/assets/fonts/icons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/themes/basic/assets/fonts/icons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/themes/default/assets/fonts/icons.eot" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/themes/default/assets/fonts/icons.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/themes/default/assets/fonts/icons.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/themes/default/assets/fonts/icons.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/themes/default/assets/fonts/icons.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/themes/default/assets/fonts/icons.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/lib/semantic/themes/default/assets/images/flags.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/blog/controller/TypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/blog/controller/TypeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/blog/controller/adminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/blog/controller/adminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/blog/controller/visitorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/blog/controller/visitorController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/blog/dao/BlogMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/blog/dao/BlogMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/blog/pojo/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/blog/pojo/Blog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/blog/dao/TypeMaaper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/blog/dao/TypeMaaper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/blog/pojo/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/blog/pojo/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/blog/pojo/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/blog/pojo/Type.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/blog/service/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/blog/service/BlogService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/blog/service/BlogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/blog/service/BlogServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/blog/service/TypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/blog/service/TypeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/blog/service/TypeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/blog/service/TypeServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/BlogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/BlogMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/TYPEMAPPER.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/TYPEMAPPER.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/typo.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/typo.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/blogs-input.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/blogs-input.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/blogs.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/blogs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/types.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/types.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/common/common.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/common/common.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blog/controller/BlogController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/blog/controller/BlogController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blog/controller/BlogController.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/blog/controller/BlogController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blog/controller/TypeController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/blog/controller/TypeController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/types.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/types.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/blog/controller/TypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/blog/controller/TypeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/blog/controller/adminController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/blog/controller/adminController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/blog/controller/adminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/blog/controller/adminController.java" afterDir="false" />
@@ -28,18 +175,26 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/blog/controller/visitorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/blog/controller/visitorController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/blog/dao/BlogMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/blog/dao/BlogMapper.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/blog/dao/BlogMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/blog/dao/BlogMapper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blog/pojo/Blog.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/blog/pojo/Blog.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blog/pojo/Blog.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/blog/pojo/Blog.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blog/dao/TypeMaaper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/blog/dao/TypeMaaper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blog/dao/TypeMaaper.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/blog/dao/TypeMaaper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blog/pojo/Type.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/blog/pojo/Type.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blog/pojo/Type.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/blog/pojo/Type.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/blog/service/BlogService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/blog/service/BlogService.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/blog/service/BlogService.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/blog/service/BlogService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/blog/service/BlogServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/blog/service/BlogServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/example/blog/service/BlogServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/blog/service/BlogServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blog/service/TypeService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/blog/service/TypeService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blog/service/TypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/blog/service/TypeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blog/service/TypeServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/blog/service/TypeServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/example/blog/service/TypeServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/example/blog/service/TypeServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mapper/BlogMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/BlogMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/TYPEMAPPER.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/TYPEMAPPER.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/typo.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/typo.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/about.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/blogs-input.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/blogs-input.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/blogs.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/blogs.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/admin/types.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/admin/types.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/blog.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/blog.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/common/common.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/common/common.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/types.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/types.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,6 +234,13 @@
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
         <item name="blog: schema" type="76f4a085:MysqlImplModel$Schema" />
         <item name="t_blog: table" type="285a2a93:MysqlImplModel$Table" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="blog@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="blog: schema" type="76f4a085:MysqlImplModel$Schema" />
+        <item name="t_comment: table" type="285a2a93:MysqlImplModel$Table" />
       </path>
     </expand>
     <select />
@@ -132,33 +294,33 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="XML" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/admin" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/static/lib/semantic" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="project.structure.last.edited" value="Facets" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\web\blog\src\main\resources\mapper" />
-      <recent name="D:\web\blog\src\main\resources" />
-      <recent name="D:\web\blog\src\main\resources\static\images" />
-      <recent name="F:\迅雷下载\RuoYi\blog\src\main\resources\static\images" />
-      <recent name="F:\迅雷下载\RuoYi\blog\src\main\resources" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\web\blog\src\main\resources\static\lib\semantic" />
       <recent name="D:\web\blog\src\main\resources\templates\admin" />
       <recent name="D:\web\blog\src\main\resources\static\js" />
       <recent name="D:\web\blog\src\main\resources\static\images" />
       <recent name="F:\迅雷下载\RuoYi\blog\src\main\resources" />
-      <recent name="F:\迅雷下载\RuoYi\blog\src\main\resources\templates" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\web\blog\src\main\resources\static\lib\semantic" />
+      <recent name="D:\web\blog\src\main\resources\mapper" />
+      <recent name="D:\web\blog\src\main\resources" />
+      <recent name="D:\web\blog\src\main\resources\static\images" />
+      <recent name="F:\迅雷下载\RuoYi\blog\src\main\resources\static\images" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.BlogApplication">
@@ -241,6 +403,8 @@
       <workItem from="1589816665331" duration="288000" />
       <workItem from="1589848614378" duration="37405000" />
       <workItem from="1589899157821" duration="4176000" />
+      <workItem from="1589903395368" duration="250000" />
+      <workItem from="1589935229028" duration="32746000" />
     </task>
     <servers />
   </component>
@@ -266,11 +430,12 @@
       <screen x="0" y="0" width="1920" height="1024" />
     </state>
     <state x="289" y="215" key="#com.intellij.ide.fileTemplates.ui.ConfigureTemplatesDialog/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589527287796" />
-    <state x="765" y="223" key="#com.intellij.ide.util.MemberChooser" timestamp="1589898782163">
+    <state x="765" y="223" key="#com.intellij.ide.util.MemberChooser" timestamp="1589988522738">
       <screen x="0" y="0" width="1920" height="1024" />
     </state>
     <state x="765" y="-857" key="#com.intellij.ide.util.MemberChooser/0.-1080.1920.1024/0.0.1920.1024@0.-1080.1920.1024" timestamp="1589808841230" />
-    <state x="765" y="223" key="#com.intellij.ide.util.MemberChooser/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589898782163" />
+    <state x="765" y="223" key="#com.intellij.ide.util.MemberChooser/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589988522738" />
+    <state x="765" y="223" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1024@0.0.1920.1024" timestamp="1589946733617" />
     <state x="690" y="294" key="#com.intellij.ide.util.PackageChooserDialog" timestamp="1589379068565">
       <screen x="0" y="0" width="1920" height="1024" />
     </state>
@@ -294,91 +459,100 @@
     </state>
     <state x="825" y="-669" width="294" height="272" key="Github.ShareDialog/0.-1080.1920.1024/0.0.1920.1024@0.-1080.1920.1024" timestamp="1589448863919" />
     <state x="825" y="411" key="Github.ShareDialog/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589556112307" />
-    <state width="1879" height="316" key="GridCell.Tab.0.bottom" timestamp="1589903350776">
+    <state width="1879" height="203" key="GridCell.Tab.0.bottom" timestamp="1589979384669">
       <screen x="0" y="0" width="1920" height="1024" />
     </state>
     <state width="1879" height="413" key="GridCell.Tab.0.bottom/0.-1080.1920.1024/0.0.1920.1024@0.-1080.1920.1024" timestamp="1589809082044" />
-    <state width="1879" height="316" key="GridCell.Tab.0.bottom/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589903350776" />
-    <state width="1879" height="316" key="GridCell.Tab.0.center" timestamp="1589903350776">
+    <state width="1879" height="203" key="GridCell.Tab.0.bottom/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589979384669" />
+    <state width="1879" height="195" key="GridCell.Tab.0.bottom/0.0.1920.1024@0.0.1920.1024" timestamp="1589946808461" />
+    <state width="1879" height="203" key="GridCell.Tab.0.center" timestamp="1589979384669">
       <screen x="0" y="0" width="1920" height="1024" />
     </state>
     <state width="1879" height="413" key="GridCell.Tab.0.center/0.-1080.1920.1024/0.0.1920.1024@0.-1080.1920.1024" timestamp="1589809082040" />
-    <state width="1879" height="316" key="GridCell.Tab.0.center/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589903350776" />
-    <state width="1879" height="316" key="GridCell.Tab.0.left" timestamp="1589903350776">
+    <state width="1879" height="203" key="GridCell.Tab.0.center/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589979384669" />
+    <state width="1879" height="195" key="GridCell.Tab.0.center/0.0.1920.1024@0.0.1920.1024" timestamp="1589946808461" />
+    <state width="1879" height="203" key="GridCell.Tab.0.left" timestamp="1589979384669">
       <screen x="0" y="0" width="1920" height="1024" />
     </state>
     <state width="1879" height="413" key="GridCell.Tab.0.left/0.-1080.1920.1024/0.0.1920.1024@0.-1080.1920.1024" timestamp="1589809082035" />
-    <state width="1879" height="316" key="GridCell.Tab.0.left/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589903350776" />
-    <state width="1879" height="316" key="GridCell.Tab.0.right" timestamp="1589903350776">
+    <state width="1879" height="203" key="GridCell.Tab.0.left/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589979384669" />
+    <state width="1879" height="195" key="GridCell.Tab.0.left/0.0.1920.1024@0.0.1920.1024" timestamp="1589946808460" />
+    <state width="1879" height="203" key="GridCell.Tab.0.right" timestamp="1589979384669">
       <screen x="0" y="0" width="1920" height="1024" />
     </state>
     <state width="1879" height="413" key="GridCell.Tab.0.right/0.-1080.1920.1024/0.0.1920.1024@0.-1080.1920.1024" timestamp="1589809082042" />
-    <state width="1879" height="316" key="GridCell.Tab.0.right/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589903350776" />
-    <state width="1879" height="316" key="GridCell.Tab.1.bottom" timestamp="1589903350777">
+    <state width="1879" height="203" key="GridCell.Tab.0.right/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589979384669" />
+    <state width="1879" height="195" key="GridCell.Tab.0.right/0.0.1920.1024@0.0.1920.1024" timestamp="1589946808461" />
+    <state width="1879" height="203" key="GridCell.Tab.1.bottom" timestamp="1589979384670">
       <screen x="0" y="0" width="1920" height="1024" />
     </state>
     <state width="1879" height="413" key="GridCell.Tab.1.bottom/0.-1080.1920.1024/0.0.1920.1024@0.-1080.1920.1024" timestamp="1589809082048" />
-    <state width="1879" height="316" key="GridCell.Tab.1.bottom/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589903350777" />
-    <state width="1879" height="316" key="GridCell.Tab.1.center" timestamp="1589903350776">
+    <state width="1879" height="203" key="GridCell.Tab.1.bottom/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589979384670" />
+    <state width="1879" height="195" key="GridCell.Tab.1.bottom/0.0.1920.1024@0.0.1920.1024" timestamp="1589946808461" />
+    <state width="1879" height="203" key="GridCell.Tab.1.center" timestamp="1589979384670">
       <screen x="0" y="0" width="1920" height="1024" />
     </state>
     <state width="1879" height="413" key="GridCell.Tab.1.center/0.-1080.1920.1024/0.0.1920.1024@0.-1080.1920.1024" timestamp="1589809082047" />
-    <state width="1879" height="316" key="GridCell.Tab.1.center/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589903350776" />
-    <state width="1879" height="316" key="GridCell.Tab.1.left" timestamp="1589903350776">
+    <state width="1879" height="203" key="GridCell.Tab.1.center/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589979384670" />
+    <state width="1879" height="195" key="GridCell.Tab.1.center/0.0.1920.1024@0.0.1920.1024" timestamp="1589946808461" />
+    <state width="1879" height="203" key="GridCell.Tab.1.left" timestamp="1589979384670">
       <screen x="0" y="0" width="1920" height="1024" />
     </state>
     <state width="1879" height="413" key="GridCell.Tab.1.left/0.-1080.1920.1024/0.0.1920.1024@0.-1080.1920.1024" timestamp="1589809082045" />
-    <state width="1879" height="316" key="GridCell.Tab.1.left/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589903350776" />
-    <state width="1879" height="316" key="GridCell.Tab.1.right" timestamp="1589903350777">
+    <state width="1879" height="203" key="GridCell.Tab.1.left/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589979384670" />
+    <state width="1879" height="195" key="GridCell.Tab.1.left/0.0.1920.1024@0.0.1920.1024" timestamp="1589946808461" />
+    <state width="1879" height="203" key="GridCell.Tab.1.right" timestamp="1589979384670">
       <screen x="0" y="0" width="1920" height="1024" />
     </state>
     <state width="1879" height="413" key="GridCell.Tab.1.right/0.-1080.1920.1024/0.0.1920.1024@0.-1080.1920.1024" timestamp="1589809082048" />
-    <state width="1879" height="316" key="GridCell.Tab.1.right/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589903350777" />
-    <state width="1879" height="316" key="GridCell.Tab.2.bottom" timestamp="1589903350777">
+    <state width="1879" height="203" key="GridCell.Tab.1.right/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589979384670" />
+    <state width="1879" height="195" key="GridCell.Tab.1.right/0.0.1920.1024@0.0.1920.1024" timestamp="1589946808461" />
+    <state width="1879" height="252" key="GridCell.Tab.2.bottom" timestamp="1589961331753">
       <screen x="0" y="0" width="1920" height="1024" />
     </state>
     <state width="1879" height="342" key="GridCell.Tab.2.bottom/0.-1080.1920.1024/0.0.1920.1024@0.-1080.1920.1024" timestamp="1589443486062" />
-    <state width="1879" height="316" key="GridCell.Tab.2.bottom/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589903350777" />
-    <state width="1879" height="316" key="GridCell.Tab.2.center" timestamp="1589903350777">
+    <state width="1879" height="252" key="GridCell.Tab.2.bottom/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589961331753" />
+    <state width="1879" height="252" key="GridCell.Tab.2.center" timestamp="1589961331753">
       <screen x="0" y="0" width="1920" height="1024" />
     </state>
     <state width="1879" height="342" key="GridCell.Tab.2.center/0.-1080.1920.1024/0.0.1920.1024@0.-1080.1920.1024" timestamp="1589443486061" />
-    <state width="1879" height="316" key="GridCell.Tab.2.center/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589903350777" />
-    <state width="1879" height="316" key="GridCell.Tab.2.left" timestamp="1589903350777">
+    <state width="1879" height="252" key="GridCell.Tab.2.center/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589961331753" />
+    <state width="1879" height="252" key="GridCell.Tab.2.left" timestamp="1589961331752">
       <screen x="0" y="0" width="1920" height="1024" />
     </state>
     <state width="1879" height="342" key="GridCell.Tab.2.left/0.-1080.1920.1024/0.0.1920.1024@0.-1080.1920.1024" timestamp="1589443486061" />
-    <state width="1879" height="316" key="GridCell.Tab.2.left/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589903350777" />
-    <state width="1879" height="316" key="GridCell.Tab.2.right" timestamp="1589903350777">
+    <state width="1879" height="252" key="GridCell.Tab.2.left/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589961331752" />
+    <state width="1879" height="252" key="GridCell.Tab.2.right" timestamp="1589961331753">
       <screen x="0" y="0" width="1920" height="1024" />
     </state>
     <state width="1879" height="342" key="GridCell.Tab.2.right/0.-1080.1920.1024/0.0.1920.1024@0.-1080.1920.1024" timestamp="1589443486062" />
-    <state width="1879" height="316" key="GridCell.Tab.2.right/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589903350777" />
-    <state x="490" y="171" key="Maven.ArtifactSearchDialog" timestamp="1589379104997">
+    <state width="1879" height="252" key="GridCell.Tab.2.right/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589961331753" />
+    <state x="490" y="171" key="Maven.ArtifactSearchDialog" timestamp="1589976673888">
       <screen x="0" y="0" width="1920" height="1024" />
     </state>
-    <state x="490" y="171" key="Maven.ArtifactSearchDialog/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589379104997" />
-    <state x="493" y="158" key="SettingsEditor" timestamp="1589626367315">
+    <state x="490" y="171" key="Maven.ArtifactSearchDialog/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589976673888" />
+    <state x="493" y="158" key="SettingsEditor" timestamp="1589976741442">
       <screen x="0" y="0" width="1920" height="1024" />
     </state>
-    <state x="493" y="158" key="SettingsEditor/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589626367315" />
+    <state x="493" y="158" key="SettingsEditor/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589976741442" />
     <state x="760" y="282" key="SpringBootCustomization" timestamp="1589527338148">
       <screen x="0" y="0" width="1920" height="1024" />
     </state>
     <state x="760" y="282" key="SpringBootCustomization/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589527338148" />
-    <state x="552" y="246" key="Vcs.Push.Dialog.v2" timestamp="1589816784092">
+    <state x="552" y="246" key="Vcs.Push.Dialog.v2" timestamp="1589903542761">
       <screen x="0" y="0" width="1920" height="1024" />
     </state>
-    <state x="552" y="246" key="Vcs.Push.Dialog.v2/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589816784092" />
+    <state x="552" y="246" key="Vcs.Push.Dialog.v2/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589903542761" />
     <state x="669" y="155" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog" timestamp="1589878298307">
       <screen x="0" y="0" width="1920" height="1024" />
     </state>
     <state x="669" y="155" key="com.intellij.database.view.ui.AbstractDbRefactoringDialog/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589878298307" />
-    <state x="92" y="92" width="1736" height="840" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1589698449504">
+    <state x="92" y="92" width="1736" height="840" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1589945326803">
       <screen x="0" y="0" width="1920" height="1024" />
     </state>
     <state x="92" y="-988" width="1736" height="840" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.-1080.1920.1024/0.0.1920.1024@0.-1080.1920.1024" timestamp="1589521971312" />
     <state x="92" y="92" width="1736" height="840" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589698449504" />
+    <state x="92" y="92" width="1736" height="840" maximized="true" key="com.intellij.history.integration.ui.views.FileHistoryDialog/0.0.1920.1024@0.0.1920.1024" timestamp="1589945326803" />
     <state x="92" y="-988" width="1736" height="840" key="dock-window-1" timestamp="1589441815244">
       <screen x="0" y="-1080" width="1920" height="1024" />
     </state>
@@ -392,9 +566,28 @@
       <screen x="0" y="-1080" width="1920" height="1024" />
     </state>
     <state x="124" y="-859" key="new project wizard/0.-1080.1920.1024/0.0.1920.1024@0.-1080.1920.1024" timestamp="1589438679844" />
+    <state x="702" y="144" key="refactoring.ChangeSignatureDialog" timestamp="1589967361523">
+      <screen x="0" y="0" width="1920" height="1024" />
+    </state>
+    <state x="702" y="144" key="refactoring.ChangeSignatureDialog/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589967361523" />
     <state x="623" y="221" width="672" height="678" key="search.everywhere.popup" timestamp="1589380595870">
       <screen x="0" y="0" width="1920" height="1024" />
     </state>
     <state x="623" y="221" width="672" height="678" key="search.everywhere.popup/0.-1080.1920.1024/0.0.1920.1024@0.0.1920.1024" timestamp="1589380595870" />
+    <state x="681" y="425" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1589937142402">
+      <screen x="0" y="0" width="1920" height="1024" />
+    </state>
+    <state x="681" y="425" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1920.1024@0.0.1920.1024" timestamp="1589937142402" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/blog/controller/adminController.java</url>
+          <line>109</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

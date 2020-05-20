@@ -69,4 +69,6 @@ public class TypeController {
         }
         return info;
     }
+
+
 }

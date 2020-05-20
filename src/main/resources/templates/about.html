@@ -45,13 +45,13 @@
             <div class="ui teal basic left pointing label m-margin-tb-tiny">...</div>
           </div>
           <div class="ui bottom attached segment">
-            <a href="#" class="ui circular icon button" data-content="https://github.com/18258026861"><i class="github icon"></i></a>
-            <a href="#" class="ui circular icon button" data-content="https://github.com/18258026861"><i class="gitee icon"></i></a>
+            <a href="#" class="ui github circular icon button" data-content="https://github.com/18258026861" data-position="bottom center"><i class="github icon"></i></a>
+            <a href="#" class="ui wechat icon button" ><i class="weixin icon"></i></a>
             <a href="#" class="ui qq circular icon button" data-content="1061603811" data-position="bottom center"><i class="qq icon"></i></a>
           </div>
 
           <div class="ui wechat-qr flowing popup transition hidden">
-            <img src="../static/images/wechat.jpg" alt="" class="ui rounded image" style="width: 110px">
+            <img src="../static/images/wechat.jpg" th:src="@{images/wechat.jpg}" alt="" class="ui rounded image" style="width: 110px">
           </div>
           </div>
       </div>
@@ -76,6 +76,7 @@
       position: 'bottom center'
     });
     $('.qq').popup();
+    $('.github').popup();
 
   </script>
 </body>

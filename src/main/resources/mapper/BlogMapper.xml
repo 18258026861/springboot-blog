@@ -22,7 +22,7 @@
 
 <!--通过类型和title查询博客-->
     <select id="queryBlogByTitleAndType" parameterType="SearchBlog" resultMap="blog">
-        select b.published,b.id bid,b.title,t.name tname,b.create_time,b.type_id btid,b.description,t.id tid,t.name tname from t_blog b,t_type t
+        select b.published,b.id bid,b.title,t.name tname,b.create_time,b.create_time,b.type_id btid,b.description,t.id tid,t.name tname from t_blog b,t_type t
         <where>
             b.type_id = t.id
             <if test="title!=null">
@@ -34,6 +34,11 @@
         </where>
     </select>
 
+    <!--游客通过查询栏查询博客-->
+    <select id="queryBlogTitleOrContentBysearch" resultMap="blog">
+        select b.published,b.id bid,b.title,t.name tname,b.create_time,b.create_time,b.type_id btid,b.description,t.id tid,t.name tname from t_blog b,t_type t
+        where b.type_id = t.id and (b.title like CONCAT(CONCAT('%',#{search}),'%') or b.description like CONCAT(CONCAT('%',#{search}),'%') or b.content like CONCAT(CONCAT('%',#{search}),'%') )
+    </select>
 
 
 <!--    查询所有博客-->
@@ -50,6 +55,7 @@
         from t_blog b,t_type t
         where b.type_id = t.id and b.id = #{id}
     </select>
+
 
 
 

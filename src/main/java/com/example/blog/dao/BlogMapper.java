@@ -32,5 +32,6 @@ public interface BlogMapper {
 
     int updateBlog(Blog blog);
 
+    List<Blog> queryBlogTitleOrContentBysearch(String search);
 
 }
